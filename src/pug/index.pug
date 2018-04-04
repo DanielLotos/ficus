@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="stylesheet", href="css/style.css")
+    title FICUS
+  body
+    header.home
+      h1.home__title ficus
+      ul.social__list
+        li.social__item
+          a.social__link(href="youtube.com") YouTube
+        li.social__item
+          a.social__link(href="vk.com") VK
+        li.social__item
+          a.social__link(href="facebook.com") Facebook
+        li.social__item
+          a.social__link(href="instagram.com") Instagram
+
+    section.about
+      a.home__link Главная
+      a.to-order__link заказать
+      ul.social__list
+        li.social__item
+          a.social__link(href="youtube.com") YouTube
+        li.social__item
+          a.social__link(href="vk.com") VK
+        li.social__item
+          a.social__link(href="facebook.com") Facebook
+        li.social__item
+          a.social__link(href="instagram.com") Instagram
+
+      .about-us
+        .about__counter
+          h2.counter__title-slide О нас
+          span.counter__num-viewport 01
+          span.counter__max-num-viewport 05
+        h2.about-us__name
+          | ficus
+          br
+          | production
+        p.about-us__quote
+          | Мы занимаемся созданеим видео любой сложности:
+          br
+          | от репортажей до рекламных роликов.
+        p.about-us__text.
+          Снимаем любые виды роликов; если Вам нужно рекламное видео для Вашей компании, музыкальный клип,
+          ролик для YouTube, отчет с мероприятия или любое другое видео, обращайтесь к нам, мы вместе всё обсудим и реализуем Ваши задумки.
+      .steps
+        h2.steps__title этапы работы
+        a.steps__link.steps__link--active(href="video.html") видео
+        a.steps__link(href="youtube.com") youtube
+        img(src="steps-note.jpg", alt="рисунок ноутбука")
+        p.steps__production продакшен
+        p.steps__text.
+          К своему делу мы подходим основательно: прорабатываем каждый проект от идеи и до конечного результата.
+          Работаем с любыми видами фото- и видеотехники; имеем при себе помощников для съёмок, где они просто необходимы.
+        .steps__slide-selecter
+          button.steps__arrow-prev(type="button") <
+          span.steps__num-slide 01
+          button.steps__arrow-next(type="button") >
+
+    section.portfolio
+      a.home__link Главная
+      a.to-order__link заказать
+      ul.social__list
+        li.social__item
+          a.social__link(href="youtube.com") YouTube
+        li.social__item
+          a.social__link(href="vk.com") VK
+        li.social__item
+          a.social__link(href="facebook.com") Facebook
+        li.social__item
+          a.social__link(href="instagram.com") Instagram
+      .portfolio__container
+        .portfolio__counter
+          h2.counter__title-slide портфолио
+          span.counter__num-viewport 02
+          span.counter__max-num-viewport 05
+        .portfolio__news
+          img.news__img(src="video-prev.jpg", alt="Превью видео")
+          h2.news__title Концерт m83 в Москве
+          p.news__text.
+            Видеотчёт с концерта M83, прошедшего 19 ноября 2016 года в Москве в музее современного
+            искусства "Гараж". Отличный концерт, превосходная атмосфера, Бюджет "Эконом".
+        button.news__btn-prew(type="button") <
+        button.news__btn-next(type="button") >
+
+      .portfolio__carousel
+        a.portfolio__link.portfolio__link--active(href="video.html") видео
+        a.portfolio__link(href="youtube.com") youtube
+        .portfolio__gallery
+          img.gallery__item(src="gallery-1.jpg", alt="Котейка на одеяле")
+          img.gallery__item(src="gallery-2.jpg", alt="Грязевая дорога в поле")
+          img.gallery__item(src="gallery-3.jpg", alt="Музыкальное представление")
+          img.gallery__item(src="gallery-4.jpg", alt="Черно-белый маяк")
+          img.gallery__item(src="gallery-5.jpg", alt="Мопс, завернутый в плед")
+          img.gallery__item(src="gallery-6.jpg", alt="Поток людей")
+        .carousel__controller
+          input(type="radio", name="carousel__slide", id="carousel__slide-1" , value="1" checked)
+          label(for="carousel__slide-1")
+          input(type="radio", name="carousel__slide", id="carousel__slide-2" , value="2")
+          label(for="carousel__slide-2")
+          input(type="radio", name="carousel__slide", id="carousel__slide-3" , value="3")
+          label(for="carousel__slide-3")
+          input(type="radio", name="carousel__slide", id="carousel__slide-4" , value="4")
+          label(for="carousel__slide-4")
+
+    section.price
+      a.home__link Главная
+      a.to-order__link заказать
+      ul.social__list
+        li.social__item
+          a.social__link(href="youtube.com") YouTube
+        li.social__item
+          a.social__link(href="vk.com") VK
+        li.social__item
+          a.social__link(href="facebook.com") Facebook
+        li.social__item
+          a.social__link(href="instagram.com") Instagram
+      .price__counter
+        h2.counter__title-slide прайс
+        span.counter__num-viewport 03
+        span.counter__max-num-viewport 05
+      p.price__text.
+        Мы занимаемся созданием видео любой сложности: от репортажей до рекламных роликов.
+        Прорабатываем каждый проект от идеи и до конечного результата. Работаем с любыми видами фото- и видеотехники.
+      .price__container
+        .price__title Эконом
+        ul.features__list
+          li.features__item
+            p.feates__capture Lorem ipsum
+            p.feates__value 10GB of Lorem ipsum
+          li.features__item
+            p.feates__capture Lorem ipsum
+            p.feates__value 10GB of Lorem ipsum
+        .price__value от 32 000 Р
+        a.price__select(href="#") >
+
+      .price__container
+        .price__title премиум
+        ul.features__list
+          li.features__item
+            p.feates__capture Lorem ipsum
+            p.feates__value 10GB of Lorem ipsum
+          li.features__item
+            p.feates__capture Lorem ipsum
+            p.feates__value 10GB of Lorem ipsum
+        .price__value от 64 000 Р
+        a.price__select(href="#") >
+
+      ul.partners__list
+        li.partners__item
+          a.partners__link.partners__link--magnet(href="#") magnet
+        li.partners__item
+          a.partners__link.partners__link--herbert(href="#") herbert
+        li.partners__item
+          a.partners__link.partners__link--rick(href="#") rick
+        li.partners__item
+          a.partners__link.partners__link--firstudio(href="#") firstudio
+        li.partners__item
+          a.partners__link.partners__link--stallion(href="#") stallion
+        li.partners__item
+          a.partners__link.partners__link--magnet(href="#") magnet
+
+    section.team
+      a.home__link Главная
+      a.to-order__link заказать
+      ul.social__list
+        li.social__item
+          a.social__link(href="youtube.com") YouTube
+        li.social__item
+          a.social__link(href="vk.com") VK
+        li.social__item
+          a.social__link(href="facebook.com") Facebook
+        li.social__item
+          a.social__link(href="instagram.com") Instagram
+      .team__counter
+        h2.counter__title-slide команда
+        span.counter__num-viewport 04
+        span.counter__max-num-viewport 05
+      p.team__text.
+        Мы занимаемся созданием видео любой сложности: от репортажей до рекламных роликов.
+        Прорабатываем каждый проект от идеи и до конечного результата. Работаем с любыми видами фото- и видеотехники.
+      ul.person__list
+        li.person__item
+          img.person__art(src="art-Rudenko.png", alt="Арт Ксении Руденко")
+          p.person__name Ксения Руденко
+          p.person__position продюссер
+          p.person__about-person Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        li.person__item
+          img.person__art(src="art-Valiullin.png", alt="Арт Филипп Валиулин")
+          p.person__name Филипп Валиулин
+          p.person__position режиссер
+          p.person__about-person Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+      .team__quote
+        p.quote__text.
+          Lorem ipsum dolor sit amet, consectetur elit, sed do eiumod tempor incididunt ut labore et dolore magna aliqua.
+        p.quote__author Arthur Hansen
+        p.quote__position CEO / Letters Inc
+        .quote-selecter__controller
+          input(type="radio", name="team-quote", id="quote-1" , value="1" checked)
+          label(for="quote-1")
+          input(type="radio", name="team-quote", id="quote-2" , value="2")
+          label(for="quote-2")
+          input(type="radio", name="team-quote", id="quote-3" , value="3")
+          label(for="quote-3")
+          input(type="radio", name="team-quote", id="quote-4" , value="4")
+          label(for="quote-4")
+
+    section.contacts
+      a.home__link Главная
+      a.to-order__link заказать
+      ul.social__list
+        li.social__item
+          a.social__link(href="youtube.com") YouTube
+        li.social__item
+          a.social__link(href="vk.com") VK
+        li.social__item
+          a.social__link(href="facebook.com") Facebook
+        li.social__item
+          a.social__link(href="instagram.com") Instagram
+      .contacts__counter
+        h2.counter__title-slide контакты
+        span.counter__num-viewport 05
+        span.counter__max-num-viewport 05
+      p.contacts__text.
+        Мы занимаемся созданием видео любой сложности: от репортажей до рекламных роликов.
+        Прорабатываем каждый проект от идеи и до конечного результата. Работаем с любыми видами фото- и видеотехники.
+      form.order__form
+        input.order__name(type="text" placeholder="Enter your text here")
+        input.order__email(type="email" placeholder="Enter your text here")
+        input.order__letter(type="text" placeholder="Enter your text here")
+        button.order__btn(type="submit") Заказать
+      .contact-info
+        .messenger__container
+          p.messenger__title Мессенджер
+          a.messenger__link(href="#") WhatsUp
+          a.messenger__link(href="#") Telegram
+        .phone__container
+          p.phone__title Телефон
+          a.phone__link(href="tel:014796427461") (01) 479-642-7461
+          a.phone__link(href="tel:014796427462") (01) 479-642-7462
+        .email__container
+          p.email__title Email
+          a.phone__link(href="mailto:anderson@hotmail.com") anderson@hotmail.com
+          a.phone__link(href="mailto:hello@hotmail.com") hello@hotmail.com
+
+    footer.main-footer
+      .footer__dark
+      .info__container
+        p.info__title ficus.
+        p.info__text.
+          Мы занимаемся созданием видео любой сложности: от репортажей до рекламных роликов.
+          Прорабатываем каждый проект от идеи и до конечного результата. Работаем с любыми видами фото- и видеотехники.
+      ul.social__list
+        li.social__item
+          a.social__link(href="youtube.com") YouTube
+        li.social__item
+          a.social__link(href="vk.com") VK
+        li.social__item
+          a.social__link(href="facebook.com") Facebook
+        li.social__item
+          a.social__link(href="instagram.com") Instagram
+      section.copyright-area
+        p.copyright__text © 2018 Ficus All Rights Reserved
+        nav.footer__nav
+          ul.nav__list
+            li.nav__item
+              a.nav__link(href="#") главная
+            li.nav__item
+              a.nav__link(href="#") о нас
+            li.nav__item
+              a.nav__link(href="#") работы
+            li.nav__item
+              a.nav__link(href="#") стоимость
+            li.nav__item
+              a.nav__link(href="#") команда
+            li.nav__item
+              a.nav__link(href="#") контакты
+
+
