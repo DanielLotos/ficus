@@ -1,36 +1,19 @@
 <!DOCTYPE html>
-html(lang="en")
+html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    link(rel="stylesheet", href="css/style.css")
     title FICUS
   body
     header.home
-      h1.home__title ficus
-      ul.social__list
-        li.social__item
-          a.social__link(href="youtube.com") YouTube
-        li.social__item
-          a.social__link(href="vk.com") VK
-        li.social__item
-          a.social__link(href="facebook.com") Facebook
-        li.social__item
-          a.social__link(href="instagram.com") Instagram
+      h1.home__title ficus.
+      include pug/social.pug
 
     section.about
       a.home__link Главная
       a.to-order__link заказать
-      ul.social__list
-        li.social__item
-          a.social__link(href="youtube.com") YouTube
-        li.social__item
-          a.social__link(href="vk.com") VK
-        li.social__item
-          a.social__link(href="facebook.com") Facebook
-        li.social__item
-          a.social__link(href="instagram.com") Instagram
+      include pug/social.pug
 
       .about-us
         .about__counter
@@ -65,15 +48,7 @@ html(lang="en")
     section.portfolio
       a.home__link Главная
       a.to-order__link заказать
-      ul.social__list
-        li.social__item
-          a.social__link(href="youtube.com") YouTube
-        li.social__item
-          a.social__link(href="vk.com") VK
-        li.social__item
-          a.social__link(href="facebook.com") Facebook
-        li.social__item
-          a.social__link(href="instagram.com") Instagram
+      include pug/social.pug
       .portfolio__container
         .portfolio__counter
           h2.counter__title-slide портфолио
@@ -111,15 +86,7 @@ html(lang="en")
     section.price
       a.home__link Главная
       a.to-order__link заказать
-      ul.social__list
-        li.social__item
-          a.social__link(href="youtube.com") YouTube
-        li.social__item
-          a.social__link(href="vk.com") VK
-        li.social__item
-          a.social__link(href="facebook.com") Facebook
-        li.social__item
-          a.social__link(href="instagram.com") Instagram
+      include pug/social.pug
       .price__counter
         h2.counter__title-slide прайс
         span.counter__num-viewport 03
@@ -168,15 +135,7 @@ html(lang="en")
     section.team
       a.home__link Главная
       a.to-order__link заказать
-      ul.social__list
-        li.social__item
-          a.social__link(href="youtube.com") YouTube
-        li.social__item
-          a.social__link(href="vk.com") VK
-        li.social__item
-          a.social__link(href="facebook.com") Facebook
-        li.social__item
-          a.social__link(href="instagram.com") Instagram
+      include pug/social.pug
       .team__counter
         h2.counter__title-slide команда
         span.counter__num-viewport 04

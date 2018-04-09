@@ -1,0 +1,13 @@
+$bg-color: none;
+
+body {
+ background: $bg-color;
+}
+
+.test-autopref {
+  display: flex;
+}
+
+.social__list {
+  outline: 2px solid black;
+}
