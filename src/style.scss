@@ -1,13 +1,38 @@
-$bg-color: none;
+@import url('https://fonts.googleapis.com/css?family=Raleway:700,800,900');
+@import './scss/social';
 
-body {
- background: $bg-color;
+$RalewayFont: 'Raleway', Arial, sans-serif;
+
+$colorBlue: #004B9F;
+$colorOrange: #FFBE40;
+$colorGreen: #2BF0C6;
+$colorBlueBlack: #1C1F32;
+$colorDarkBlue: #003066;
+
+ul {
+  list-style: none;
 }
 
-.test-autopref {
-  display: flex;
+* {
+  box-sizing: border-box;
 }
 
-.social__list {
-  outline: 2px solid black;
+.home {
+  width: 100%;
+  height: 100vh;
+  background-color: #004B9F;
+  border: 60px solid #ffffff;
 }
+
+.home__title {
+  font-family: $RalewayFont;
+  font-weight: 900;
+  font-size: 100px;
+  text-transform: uppercase;
+  color: #ffffff;
+  &::after {
+    content: ".";
+    color: $colorGreen;
+  }
+}
+

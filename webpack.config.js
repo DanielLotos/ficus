@@ -66,6 +66,9 @@ module.exports = {
     new ExtractTextPlugin('style.css')
   ],
   devServer: {
+    inline: true,
+    port: 3000,
+    hot: true,
     noInfo: true,
     overlay: true,
     open: true,
