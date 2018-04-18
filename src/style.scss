@@ -1,38 +1,222 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:700,800,900');
-@import './scss/social';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=cyrillic');
 
 $RalewayFont: 'Raleway', Arial, sans-serif;
+$OpenSansFont: 'Open Sans', Arial, sans-serif;
 
-$colorBlue: #004B9F;
-$colorOrange: #FFBE40;
-$colorGreen: #2BF0C6;
-$colorBlueBlack: #1C1F32;
-$colorDarkBlue: #003066;
+$colorBlue: #019CCB;
+$colorBlueBlack: #003B4D;
+$colorOrange: #F4AB4D;
+$colorGreen: #5CCB98;
+$colorIndigo: #885AE1;
+$colorGrey: #8C9BA5;
+$colorLightGrey: #DFE3E6;
 
+// GLOBAL STYLE
 ul {
   list-style: none;
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.home {
-  width: 100%;
-  height: 100vh;
-  background-color: #004B9F;
-  border: 60px solid #ffffff;
-}
-
-.home__title {
+body {
   font-family: $RalewayFont;
-  font-weight: 900;
-  font-size: 100px;
-  text-transform: uppercase;
-  color: #ffffff;
-  &::after {
-    content: ".";
-    color: $colorGreen;
+  text-align: justify;
+}
+
+a {
+  text-decoration: none;
+}
+
+// IMPORT AREA
+
+@import './scss/social';
+@import './scss/fontStyle';
+
+
+// GLOBAL MIXIN AREA
+
+@mixin colorScheme($color) {
+  border: 30px solid $color;
+  .home__link {
+    font-size: 0;
+    svg {
+      fill: $color;
+    }
+  }
+  .to-order__link {
+    border: 1px solid $color;
+    color: $color;
+  }
+  .counter__title-slide,
+  .counter__num-viewport,
+  .steps__num-slide,
+  .steps__production {
+    color: $color;
+  }
+  .steps__link--active,
+  .portfolio__link--active {
+    background-color: $color;
   }
 }
 
+.about,
+.portfolio,
+.price,
+.team,
+.contacts,
+.main-footer {
+  height: 100vh;
+  position: relative;
+  padding: 44px 56px;
+  padding-bottom: 75px;
+}
+
+.about {
+  @include colorScheme($colorBlue);
+}
+
+.portfolio {
+  @include colorScheme($colorOrange);
+}
+
+.price {
+  @include colorScheme($colorGreen);
+}
+
+.team {
+  @include colorScheme($colorBlue);
+}
+
+.contacts {
+  @include colorScheme(#ffffff);
+  .home__link {
+    svg {
+      path {
+        stroke: $colorOrange;
+      }
+    }
+  }
+}
+
+
+// STYLE
+
+.home {
+  width: 100vw;
+  height: 100vh;
+  background-color: $colorBlueBlack;
+  border: 60px solid #ffffff;
+}
+
+.home-order__container {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
+.to-order__link {
+  display: inline-block;
+  max-width: 164px;
+  padding: 21px 35px;
+
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  text-align: center;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 102px;
+    padding-top: 22px;
+    .about-us {
+      max-width: 590px;
+      margin-left: 143px;
+    }
+    .steps {
+      max-width: 725px;
+      padding: 40px 74px;
+      background-color: #F0F3F6;
+      &__container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 40px;
+      }
+      &__title {
+        display: inline-block;
+        margin-right: auto;
+      }
+      &__link:nth-last-child(2) {
+        margin-right: 20px;
+      }
+      &__img {
+        margin-bottom: 37px;
+      }
+      &__production {
+        margin-bottom: 22px;
+      }
+      &__slide-selecter {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 180px;
+        margin-left: auto;
+      }
+      &__text {
+        margin-bottom: 30px;
+      }
+      &__arrow-prev,
+      &__arrow-next {
+        width: 40px;
+        height: 40px;
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: transparent;
+        border: 1px solid #004B9F;
+        border-radius: 50%;
+      }
+      &__arrow-prev {
+        background-image: url("./img/sm-l-arrow.svg");
+      }
+      &__arrow-next {
+        background-image: url("./img/sm-r-arrow.svg");
+      }
+    }
+  }
+}
+
+.portfolio {
+
+  &__content {
+    display: flex;
+  }
+
+  &__news {
+    position: relative;
+    .news__video-prev {
+      display: block;
+      width: 720px;
+      height: 433px;
+    }
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+    }
+  }
+}

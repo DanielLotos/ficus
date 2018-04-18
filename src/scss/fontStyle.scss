@@ -1,0 +1,135 @@
+.home__title {
+  // font-family: inherit;
+  font-weight: 900;
+  font-size: 100px;
+  text-transform: uppercase;
+  color: #ffffff;
+  &::after {
+    content: ".";
+    color: $colorGreen;
+  }
+}
+
+.to-order__link {
+  // font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.counter__wrapper {
+  margin-bottom: 32px;
+}
+
+.counter__title-slide,
+.counter__num-viewport,
+.counter__max-num-viewport {
+  display: inline-block;
+  // font-family: inherit;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+.counter__title-slide {
+  margin-right: 53px;
+}
+
+.counter__num-viewport {
+  margin-right: 20px;
+}
+
+.counter__max-num-viewport {
+  position: relative;
+  color: $colorLightGrey;
+  &::before {
+    content: "|";
+    position: absolute;
+    left: -10px;
+  }
+}
+
+.about-us__name {
+  margin-bottom: 52px;
+  // font-family: inherit;
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 70px;
+  text-transform: uppercase;
+}
+
+.about-us__quote {
+  position: relative;
+  padding-left: 65px;
+  margin-bottom: 50px;
+
+  // font-family: inherit;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 29px;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 32px;
+    height: 23px;
+    background-image: url("./img/quote.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.about-us__text {
+  font-family: $OpenSansFont;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 29px;
+}
+
+.steps {
+  // font-family: inherit;
+}
+
+.steps__title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 32px;
+  text-transform: uppercase;
+}
+
+.steps__link,
+.portfolio__link {
+  display: inline-block;
+  color: $colorGrey;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  &--active {
+    color: #ffffff;
+    padding: 7px 15px;
+  }
+}
+
+.steps__production {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: uppercase;
+}
+
+.steps__text {
+  font-family: $OpenSansFont;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 29px;
+}
+
+.steps__num-slide {
+  font-family: $OpenSansFont;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 30px;
+
+}
