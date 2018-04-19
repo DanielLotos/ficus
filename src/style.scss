@@ -32,6 +32,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 // IMPORT AREA
 
 @import './scss/social';
@@ -62,6 +66,17 @@ a {
   .portfolio__link--active {
     background-color: $color;
   }
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }
 
 .about,
@@ -141,9 +156,9 @@ a {
     align-items: center;
     padding-right: 102px;
     padding-top: 22px;
+    padding-left: 143px;
     .about-us {
       max-width: 590px;
-      margin-left: 143px;
     }
     .steps {
       max-width: 725px;
@@ -200,23 +215,104 @@ a {
 }
 
 .portfolio {
+  .counter__wrapper {
+    margin-bottom: 35px;
+  }
 
   &__content {
     display: flex;
+    justify-content: space-between;
+    padding-left: 143px;
+    padding-right: 102px;
   }
 
   &__news {
-    position: relative;
-    .news__video-prev {
-      display: block;
-      width: 720px;
-      height: 433px;
-    }
-    svg {
-      position: absolute;
-      top: 50%;
-      left: 50%;
+    max-width: 720px;
+  }
+  .news {
+    &__video-wrapper {
+      position: relative;
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
 
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+      }
+      &__video-prev {
+        display: block;
+        height: 433px;
+      }
+    }
+    &__text {
+      margin-bottom: 12px;
+    }
+    &__arrow-wrapper {
+      text-align: right;
+    }
+    &__arrow-prev,
+    &__arrow-next {
+      width: 40px;
+      height: 40px;
+
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: transparent;
+      border: 1px solid #004B9F;
+      border-radius: 50%;
+    }
+    &__arrow-prev {
+      background-image: url("./img/sm-l-arrow.svg");
+      margin-right: 30px;
+    }
+    &__arrow-next {
+      background-image: url("./img/sm-r-arrow.svg");
+    }
+  }
+
+  &__carousel {
+    max-width: 575px;
+    .portfolio__link-list {
+      margin-bottom: 21px;
+      .portfolio__link:first-of-type {
+        margin-right: 25px;
+      }
+    }
+  }
+  .carousel {
+    &__gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-content: flex-start;
+      align-items: flex-start;
+      margin-bottom: 18px;
+      .gallery__item {
+        margin-bottom: 20px;
+      }
+    }
+    &__controller {
+      display: flex;
+      max-width: 90px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0 auto;
+      .controller__radio {
+        & + .controller__label {
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          background-color: rgba($color: #000000, $alpha: 0.2);
+          border-radius: 50%;
+        }
+        & + .controller__label:hover {
+          background-color: rgba($color: #000000, $alpha: 0.5);
+        }
+        &:checked + .controller__label {
+          background-color: #524AB0;
+        }
+      }
     }
   }
 }

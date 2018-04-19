@@ -133,3 +133,18 @@
   line-height: 30px;
 
 }
+
+.news {
+  &__title {
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 70px;
+    text-transform: uppercase;
+  }
+  &__text {
+    font-family: $OpenSansFont;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 29px;
+  }
+}

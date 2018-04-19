@@ -60,34 +60,37 @@ html(lang="ru")
             span.counter__num-viewport 02
             span.counter__max-num-viewport 05
           .portfolio__news
-            img.news__video-prev(src="./src/img/video-prev.jpg" alt="Превью видео")
-            <svg width="81" height="82" xmlns="http://www.w3.org/2000/svg"><g fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 40.996C0 18.904 18.132.623 40.224.623c22.09 0 40.223 18.281 40.223 40.373 0 22.09-18.132 40.372-40.224 40.372C18.134 81.368 0 63.087 0 40.996z" fill="#fff"/><path fill-rule="evenodd" clip-rule="evenodd" d="M35.195 29.893v22.205l16.09-11.103-16.09-11.102z" fill="#222"/></g></svg>
+            .news__video-wrapper
+              img.news__video-prev(src="./src/img/video-prev.jpg" alt="Превью видео")
+              <svg width="81" height="82" xmlns="http://www.w3.org/2000/svg"><g fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 40.996C0 18.904 18.132.623 40.224.623c22.09 0 40.223 18.281 40.223 40.373 0 22.09-18.132 40.372-40.224 40.372C18.134 81.368 0 63.087 0 40.996z" fill="#fff"/><path fill-rule="evenodd" clip-rule="evenodd" d="M35.195 29.893v22.205l16.09-11.103-16.09-11.102z" fill="#222"/></g></svg>
             h2.news__title Концерт m83 в Москве
             p.news__text.
               Видеотчёт с концерта M83, прошедшего 19 ноября 2016 года в Москве в музее современного
               искусства "Гараж". Отличный концерт, превосходная атмосфера, Бюджет "Эконом".
-          button.news__btn-prew(type="button") <
-          button.news__btn-next(type="button") >
+            .news__arrow-wrapper
+              button.news__arrow-prev(type="button")
+              button.news__arrow-next(type="button")
 
         .portfolio__carousel
-          a.portfolio__link.portfolio__link--active(href="video.html") видео
-          a.portfolio__link(href="youtube.com") youtube
-          .portfolio__gallery
-            img.gallery__item(src="gallery-1.jpg", alt="Котейка на одеяле")
-            img.gallery__item(src="gallery-2.jpg", alt="Грязевая дорога в поле")
-            img.gallery__item(src="gallery-3.jpg", alt="Музыкальное представление")
-            img.gallery__item(src="gallery-4.jpg", alt="Черно-белый маяк")
-            img.gallery__item(src="gallery-5.jpg", alt="Мопс, завернутый в плед")
-            img.gallery__item(src="gallery-6.jpg", alt="Поток людей")
+          p.portfolio__link-list
+            a.portfolio__link.portfolio__link--active(href="video.html") видео
+            a.portfolio__link(href="youtube.com") youtube
+          .carousel__gallery
+            img.gallery__item(src="./src/img/gall-1.jpg", alt="Котейка на одеяле")
+            img.gallery__item(src="./src/img/gall-2.jpg", alt="Грязевая дорога в поле")
+            img.gallery__item(src="./src/img/gall-3.jpg", alt="Музыкальное представление")
+            img.gallery__item(src="./src/img/gall-4.jpg", alt="Черно-белый маяк")
+            img.gallery__item(src="./src/img/gall-5.jpg", alt="Мопс, завернутый в плед")
+            img.gallery__item(src="./src/img/gall-6.jpg", alt="Поток людей")
           .carousel__controller
-            input(type="radio", name="carousel__slide", id="carousel__slide-1" , value="1" checked)
-            label(for="carousel__slide-1")
-            input(type="radio", name="carousel__slide", id="carousel__slide-2" , value="2")
-            label(for="carousel__slide-2")
-            input(type="radio", name="carousel__slide", id="carousel__slide-3" , value="3")
-            label(for="carousel__slide-3")
-            input(type="radio", name="carousel__slide", id="carousel__slide-4" , value="4")
-            label(for="carousel__slide-4")
+            input.controller__radio.visually-hidden(type="radio", name="carousel__slide", id="carousel__slide-1" , value="1" checked)
+            label.controller__label(for="carousel__slide-1")
+            input.controller__radio.visually-hidden(type="radio", name="carousel__slide", id="carousel__slide-2" , value="2")
+            label.controller__label(for="carousel__slide-2")
+            input.controller__radio.visually-hidden(type="radio", name="carousel__slide", id="carousel__slide-3" , value="3")
+            label.controller__label(for="carousel__slide-3")
+            input.controller__radio.visually-hidden(type="radio", name="carousel__slide", id="carousel__slide-4" , value="4")
+            label.controller__label(for="carousel__slide-4")
       include pug/social.pug
     section.price
       .home-order__container
