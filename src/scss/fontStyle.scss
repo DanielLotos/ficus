@@ -187,3 +187,61 @@
   }
 
 }
+
+
+.team {
+
+  &__text {
+    font-family: $OpenSansFont;
+    font-weight: $Regular;
+    font-size: 18px;
+    line-height: 29px;
+  }
+
+  .person {
+    &__name {
+      font-family: $OpenSansFont;
+      font-weight: $Bold;
+      font-size: 26px;
+      line-height: 50px;
+      text-align: center;
+    }
+
+    &__position {
+      font-family: $OpenSansFont;
+      font-weight: $Medium;
+      font-size: 20px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    &__about {
+      font-family: $OpenSansFont;
+      font-size: 18px;
+      line-height: 29px;
+    }
+  }
+
+  .quote {
+    &__text {
+      font-family: $OpenSansFont;
+      font-weight: $Regular;
+      font-size: 20px;
+      line-height: 125%;
+    }
+
+    &__author {
+      font-weight: $Medium;
+      font-size: 21px;
+      line-height: 32px;
+    }
+
+    &__position {
+      color: #878787;
+      font-family: $OpenSansFont;
+      font-weight: $Regular;
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+}

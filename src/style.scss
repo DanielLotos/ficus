@@ -308,6 +308,10 @@
 
 .team {
 
+  .menu-order__container {
+    margin-bottom: 5vmin;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -316,7 +320,7 @@
   }
   &__wrapper {
     display: flex;
-    margin-bottom: 7vmin;
+    margin-bottom: 10vmin;
   }
 
   .counter__wrapper {
@@ -351,7 +355,12 @@
       img {
         max-width: 214px;
         height: auto;
+        margin-bottom: 4vmin;
       }
+    }
+
+    &__position {
+      margin-bottom: 4vmin;
     }
   }
 
