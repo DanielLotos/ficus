@@ -1,72 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:700,800,900');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=cyrillic');
 
-$RalewayFont: 'Raleway', Arial, sans-serif;
-$OpenSansFont: 'Open Sans', Arial, sans-serif;
 
-$colorBlue: #019CCB;
-$colorBlueBlack: #003B4D;
-$colorOrange: #F4AB4D;
-$colorGreen: #5CCB98;
-$colorIndigo: #885AE1;
-$colorGrey: #8C9BA5;
-$colorLightGrey: #DFE3E6;
-
-// GLOBAL STYLE
-ul {
-  list-style: none;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: $RalewayFont;
-  text-align: justify;
-}
-
-a {
-  text-decoration: none;
-}
-
-button {
-  cursor: pointer;
-}
-
-// IMPORT AREA
-
+@import './scss/global';
+@import './scss/section';
 @import './scss/social';
 @import './scss/fontStyle';
 
-
-// GLOBAL MIXIN AREA
-
-@mixin colorScheme($color) {
-  border: 30px solid $color;
-  .home__link {
-    font-size: 0;
-    svg {
-      fill: $color;
-    }
-  }
-  .to-order__link {
-    border: 1px solid $color;
-    color: $color;
-  }
-  .counter__title-slide,
-  .counter__num-viewport,
-  .steps__num-slide,
-  .steps__production {
-    color: $color;
-  }
-  .steps__link--active,
-  .portfolio__link--active {
-    background-color: $color;
-  }
-}
 
 .visually-hidden {
   position: absolute !important;
@@ -79,46 +19,6 @@ button {
   overflow: hidden;
 }
 
-.about,
-.portfolio,
-.price,
-.team,
-.contacts,
-.main-footer {
-  height: 100vh;
-  position: relative;
-  padding: 44px 56px;
-  padding-bottom: 75px;
-}
-
-.about {
-  @include colorScheme($colorBlue);
-}
-
-.portfolio {
-  @include colorScheme($colorOrange);
-}
-
-.price {
-  @include colorScheme($colorGreen);
-}
-
-.team {
-  @include colorScheme($colorBlue);
-}
-
-.contacts {
-  @include colorScheme(#ffffff);
-  .home__link {
-    svg {
-      path {
-        stroke: $colorOrange;
-      }
-    }
-  }
-}
-
-
 // STYLE
 
 .home {
@@ -128,17 +28,16 @@ button {
   border: 60px solid #ffffff;
 }
 
-.home-order__container {
+.menu-order__container {
   display: flex;
   justify-content: space-between;
   align-content: center;
   align-items: center;
 }
 
-.to-order__link {
+.order__link {
   display: inline-block;
-  max-width: 164px;
-  padding: 21px 35px;
+  padding: 1rem 2rem;
 
   border-radius: 50px;
   font-size: 14px;
@@ -150,19 +49,25 @@ button {
 .about {
   display: flex;
   flex-direction: column;
-  &__content {
+  &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-right: 102px;
-    padding-top: 22px;
-    padding-left: 143px;
+    padding: 0 calc(100% / 12 + 20px);
     .about-us {
+      display: flex;
+      width: 100%;
+      flex: 1;
+      flex-direction: column;
       max-width: 590px;
     }
     .steps {
       max-width: 725px;
-      padding: 40px 74px;
+      padding: 3vmin 5vmin;
+      display: flex;
+      width: 100%;
+      flex: 1;
+      flex-direction: column;
       background-color: #F0F3F6;
       &__container {
         display: flex;
@@ -179,6 +84,8 @@ button {
       }
       &__img {
         margin-bottom: 37px;
+        width: 100%;
+        object-fit: cover;
       }
       &__production {
         margin-bottom: 22px;
@@ -219,11 +126,10 @@ button {
     margin-bottom: 35px;
   }
 
-  &__content {
+  &__container {
     display: flex;
     justify-content: space-between;
-    padding-left: 143px;
-    padding-right: 102px;
+    padding: $paddingContainer;
   }
 
   &__news {
@@ -310,9 +216,203 @@ button {
           background-color: rgba($color: #000000, $alpha: 0.5);
         }
         &:checked + .controller__label {
-          background-color: #524AB0;
+          background-color: $colorOrange;
         }
       }
     }
   }
+}
+
+
+.price {
+
+  .menu-order__container {
+    margin-bottom: 5vmin;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: $paddingContainer;
+
+  }
+  &__wrapper {
+    display: flex;
+    margin-bottom: 7vmin;
+  }
+
+  .counter__wrapper {
+    display: flex;
+    min-width: 25%;
+    max-width: 25%;
+  }
+
+  &__text {
+    display: flex;
+    max-width: 75%;
+  }
+
+  &__item {
+    display: flex;
+    padding: 3vmin;
+    margin-bottom: 7vmin;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #F8F9FB;
+
+    .features__list {
+      display: flex;
+      justify-content: space-between;
+      .features__item {
+        &:not(:last-of-type) {
+          margin-right: 5vmin;
+        }
+        .features__capture {
+          margin-bottom: 3vmin;
+        }
+      }
+    }
+    .select__wrapper {
+      display: flex;
+      align-items: center;
+      .price__value {
+        margin-right: 2vmin;
+      }
+      .price__select {
+        width: 60px;
+        height: 60px;
+
+        background-color: #F0F3F6;
+        background-image: url("./img/sm-priceSelect.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .partners__list {
+    display: flex;
+    justify-content: space-between;
+
+    .partners__link {
+      opacity: 0.5;
+      &:hover {
+      opacity: 1;
+      }
+    }
+  }
+}
+
+
+.team {
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: $paddingContainer;
+
+  }
+  &__wrapper {
+    display: flex;
+    margin-bottom: 7vmin;
+  }
+
+  .counter__wrapper {
+    display: flex;
+    min-width: 25%;
+    max-width: 25%;
+  }
+
+  &__text {
+    display: flex;
+    max-width: 75%;
+  }
+
+  .person {
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__list {
+      display: flex;
+      max-width: 50%;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__item {
+      display: flex;
+      max-width: 45%;
+      flex-direction: column;
+      img {
+        max-width: 214px;
+        height: auto;
+      }
+    }
+  }
+
+  &__quote {
+    display: flex;
+    max-width: 40%;
+    flex-direction: column;
+
+    &::before {
+      content: "";
+      display: block;
+      max-width: 64px;
+      height: 46px;
+      margin-bottom: 5vmin;
+
+      background-image: url("./img/quote.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .quote {
+      &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+
+      &__text {
+        margin-bottom: 5vmin;
+      }
+
+      &__controller {
+        display: flex;
+        min-width: 90px;
+        max-width: 90px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .controller__radio {
+          & + .controller__label {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: rgba($color: #000000, $alpha: 0.2);
+            border-radius: 50%;
+          }
+          & + .controller__label:hover {
+            background-color: rgba($color: #000000, $alpha: 0.5);
+          }
+          &:checked + .controller__label {
+            background-color: $colorBlue;
+          }
+        }
+      }
+
+    }
+
+
+  }
+
+
+
+
 }

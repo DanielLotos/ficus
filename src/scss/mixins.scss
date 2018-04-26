@@ -1,0 +1,39 @@
+@mixin colorScheme($color) {
+  border: 3vmin solid $color;
+
+  .home__link {
+    font-size: 0;
+    svg {
+      fill: $color;
+    }
+  }
+
+  .order__link {
+    border: 2px solid $color;
+    color: $color;
+  }
+
+  .counter__title-slide,
+  .counter__num-viewport,
+  .steps__num-slide,
+  .steps__production {
+    color: $color;
+  }
+
+  .steps__link--active,
+  .portfolio__link--active {
+    background-color: $color;
+  }
+
+  .price {
+    &__item {
+      border: 5px solid $color;
+      &:hover {
+        background-color: $color;
+      }
+    }
+    &__value {
+      color: $color;
+    }
+  }
+}

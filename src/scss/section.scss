@@ -1,0 +1,38 @@
+.about,
+.portfolio,
+.price,
+.team,
+.contacts,
+.main-footer {
+  height: 100vh;
+  width: 100%;
+  padding: 4vmin;
+  position: relative;
+}
+
+.about {
+  @include colorScheme($colorBlue);
+}
+
+.portfolio {
+  @include colorScheme($colorOrange);
+}
+
+.price {
+  @include colorScheme($colorGreen);
+}
+
+.team {
+  @include colorScheme($colorBlue);
+}
+
+.contacts {
+  @include colorScheme(#ffffff);
+  .home__link {
+    svg {
+      path {
+        stroke: $colorOrange;
+      }
+    }
+  }
+}

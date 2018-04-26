@@ -1,0 +1,36 @@
+mixin section
+  section&attributes(attributes)
+    include menu.pug
+    include social.pug
+    div(class!=attributes.class + '__container')
+      block
+
+
+mixin counter(name, number)
+    .counter__wrapper(name, number)
+      h2.counter__title-slide= name
+      span.counter__num-viewport= number
+      span.counter__max-num-viewport 05
+
+
+mixin priceItem(title, priceValue)
+  .price__item
+    .price__title= title
+    ul.features__list
+      li.features__item
+        p.features__capture Lorem ipsum
+        p.features__value 10GB of Lorem ipsum
+      li.features__item
+        p.features__capture Lorem ipsum
+        p.features__value 10GB of Lorem ipsum
+    .select__wrapper
+      p.price__value= priceValue
+      a.price__select(href="#", alt="Выбрать тариф " + title)
+
+
+mixin person(name, position, about, src, alt)
+  li.person__item
+    img.person__art(src=src, alt=alt)
+    p.person__name= name
+    p.person__position= position
+    p.person__about-person= about

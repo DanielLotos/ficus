@@ -1,0 +1,30 @@
+$font-fallback: system,
+                -apple-system,
+                '.SFNSText-Regular',
+                'San Francisco',
+                'Roboto',
+                'Segoe UI',
+                'Helvetica Neue',
+                'Lucida Grande',
+                sans-serif;
+
+$RalewayFont: 'Raleway', $font-fallback;
+$OpenSansFont: 'Open Sans', $font-fallback;
+
+$colorBlue: #019CCB;
+$colorBlueBlack: #003B4D;
+$colorOrange: #F4AB4D;
+$colorGreen: #5CCB98;
+$colorIndigo: #885AE1;
+$colorGrey: #8C9BA5;
+$colorLightGrey: #DFE3E6;
+
+$Light: 200;
+$Regular: 400;
+$Medium: 500;
+$SemiBold: 600;
+$Bold: 700;
+$ExtraBold: 800;
+
+
+$paddingContainer: 0 calc(100% / 12 + 20px);
