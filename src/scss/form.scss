@@ -1,0 +1,63 @@
+.order {
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+
+    color: #ffffff;
+  }
+
+  &__container {
+    display: flex;
+    margin-bottom: 4vmin;
+    justify-content: space-between;
+  }
+
+  &__wrapper {
+    display: flex;
+    min-width: 45%;
+    max-width: 45%;
+    flex-direction: column;
+  }
+
+  &__input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid #ffffff;
+
+    line-height: 4vmin;
+    &::placeholder {
+      color: rgba($color: #F0F3F6, $alpha: 0.6);;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__message {
+    width: 100%;
+
+    resize: none;
+  }
+
+  &__label--message {
+    display: block;
+    margin-bottom: 5vmin;
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin-left: auto;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+    text-align: center;
+    text-transform: uppercase;
+
+    background-color: #ffffff;
+    border: none;
+    border-radius: 50px;
+  }
+
+}

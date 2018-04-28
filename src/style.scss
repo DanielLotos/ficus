@@ -6,6 +6,7 @@
 @import './scss/section';
 @import './scss/social';
 @import './scss/fontStyle';
+@import './scss/form';
 
 
 .visually-hidden {
@@ -22,10 +23,17 @@
 // STYLE
 
 .home {
+  display: flex;
   width: 100vw;
   height: 100vh;
+  align-items: flex-end;
   background-color: $colorBlueBlack;
   border: 60px solid #ffffff;
+
+  &__title {
+    padding: 5vmin;
+    margin: 0;
+  }
 }
 
 .menu-order__container {
@@ -415,11 +423,43 @@
           }
         }
       }
-
     }
+  }
+}
 
+.contacts {
+  background-color: $colorOrange;
+
+  .menu-order__container {
+    margin-bottom: 5vmin;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: $paddingContainer;
 
   }
+  &__wrapper {
+    display: flex;
+    margin-bottom: 10vmin;
+  }
+
+  .counter__wrapper {
+    display: flex;
+    min-width: 25%;
+    max-width: 25%;
+  }
+
+  &__text {
+    display: flex;
+    max-width: 75%;
+  }
+
+
+
+
+
 
 
 

@@ -1,0 +1,14 @@
+form.order__form
+  .order__container
+    .order__wrapper
+      label.order__label(for="name")
+        | Name*
+      input.order__input.order__name(type="text" id="name" placeholder="Enter your text here")
+    .order__wrapper
+      label.order__label(for="email")
+        | Email*
+      input.order__input.order__email(type="email" id="email" placeholder="Enter your text here")
+  label.order__label.order__label--message(for="message")
+    | Message*
+    textarea.order__input.order__message(id="message" placeholder="Enter your text here")
+  button.order__btn(type="submit") заказать

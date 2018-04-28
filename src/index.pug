@@ -151,25 +151,13 @@ html(lang="ru")
               input.controller__radio.visually-hidden(type="radio", name="team-quote", id="quote-4" , value="4")
               label.controller__label(for="quote-4")
 
-    section.contacts
-      .home-order__container
-        a.home__link(href="#")
-          <svg width="80" height="80" xmlns="http://www.w3.org/2000/svg"><g><circle cx="40" cy="40" r="40"/><path d="M29.7139 39.5911c0-10.2854 10.2854-21.3055 10.2854-21.3055s10.2854 11.0201 10.2854 21.3055c0 7.3467-4.6049 13.2241-10.2854 13.2241-5.6805 0-10.2854-5.8774-10.2854-13.2241zM40 61.6312V32.979" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" stroke="#fff"/><path d="M52.4891 28.685a40.3334 40.3334 0 0 1 5.2897-2.8476s5.0376 11.9494 1.5817 20.443c-2.1849 5.3675-6.9595 8.5743-11.2794 7.9197M27.5101 28.685a40.3334 40.3334 0 0 0-5.2896-2.8476s-5.0362 11.9494-1.5803 20.443c2.1834 5.3675 6.958 8.5743 11.2779 7.9197" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="round" stroke="#fff"/><path d="M40 46.203l5.1427-4.4081M39.9991 41.7952l-5.1427-4.408" stroke-width="2" stroke-miterlimit="10" stroke="#fff"/></g></svg>
-          | Главная
-        a.to-order__link(href="#") заказать
-      include pug/social.pug
-      .counter__wrapper
-        h2.counter__title-slide контакты
-        span.counter__num-viewport 05
-        span.counter__max-num-viewport 05
-      p.contacts__text
-        | Мы занимаемся созданием видео любой сложности: от репортажей до рекламных роликов.
-        | Прорабатываем каждый проект от идеи и до конечного результата. Работаем с любыми видами фото- и видеотехники.
-      form.order__form
-        input.order__name(type="text" placeholder="Enter your text here")
-        input.order__email(type="email" placeholder="Enter your text here")
-        input.order__letter(type="text" placeholder="Enter your text here")
-        button.order__btn(type="submit") Заказать
+    +section(class='contacts')
+      .contacts__wrapper
+        +counter('контакты', '05')
+        p.contacts__text
+          | Мы занимаемся созданием видео любой сложности: от репортажей до рекламных роликов.
+          | Прорабатываем каждый проект от идеи и до конечного результата. Работаем с любыми видами фото- и видеотехники.
+      include pug/form.pug
       .contact-info
         .messenger__container
           p.messenger__title Мессенджер
