@@ -157,20 +157,21 @@ html(lang="ru")
         p.contacts__text
           | Мы занимаемся созданием видео любой сложности: от репортажей до рекламных роликов.
           | Прорабатываем каждый проект от идеи и до конечного результата. Работаем с любыми видами фото- и видеотехники.
-      include pug/form.pug
-      .contact-info
-        .messenger__container
-          p.messenger__title Мессенджер
-          a.messenger__link(href="#") WhatsUp
-          a.messenger__link(href="#") Telegram
-        .phone__container
-          p.phone__title Телефон
-          a.phone__link(href="tel:014796427461") (01) 479-642-7461
-          a.phone__link(href="tel:014796427462") (01) 479-642-7462
-        .email__container
-          p.email__title Email
-          a.phone__link(href="mailto:anderson@hotmail.com") anderson@hotmail.com
-          a.phone__link(href="mailto:hello@hotmail.com") hello@hotmail.com
+      .contacts__content
+        include pug/form.pug
+        .feedback
+          .feedback__wrapper
+            p.feedback__title Мессенджер
+            a.feedback__link.feedback__link--whatsup(href="#") WhatsUp
+            a.feedback__link.feedback__link--telegram(href="#") Telegram
+          .feedback__wrapper
+            p.feedback__title Телефон
+            a.feedback__link.feedback__link--phone(href="tel:014796427461") (01) 479-642-7461
+            a.feedback__link.feedback__link--phone(href="tel:014796427462") (01) 479-642-7462
+          .feedback__wrapper
+            p.feedback__title Email
+            a.feedback__link.feedback__link--email(href="mailto:anderson@hotmail.com") anderson@hotmail.com
+            a.feedback__link.feedback__link--email(href="mailto:hello@hotmail.com") hello@hotmail.com
 
     footer.main-footer
       .footer__dark

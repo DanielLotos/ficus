@@ -1,12 +1,10 @@
 .order {
-
-  &__form {
     display: flex;
     flex-direction: column;
+    min-width: 60%;
     max-width: 60%;
 
     color: #ffffff;
-  }
 
   &__container {
     display: flex;
@@ -27,14 +25,11 @@
     border-bottom: 3px solid #ffffff;
 
     line-height: 4vmin;
-    &::placeholder {
-      color: rgba($color: #F0F3F6, $alpha: 0.6);;
-      text-overflow: ellipsis;
-    }
   }
 
   &__message {
     width: 100%;
+    height: 8vmax;
 
     resize: none;
   }

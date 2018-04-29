@@ -245,3 +245,52 @@
     }
   }
 }
+
+.contacts {
+
+  &__text {
+    color: #ffffff;
+    font-family: $OpenSansFont;
+    font-weight: $Regular;
+    font-size: 18px;
+    line-height: 29px;
+  }
+
+  .order {
+    &__label {
+      font-family: $OpenSansFont;
+      font-weight: $Bold;
+      font-size: 18px;
+    }
+
+    &__input {
+      color: #ffffff;
+      font-family: $OpenSansFont;
+      font-weight: $Regular;
+      font-size: 18px;
+      &::placeholder {
+        color: rgba($color: #F0F3F6, $alpha: 0.6);
+        font-family: inherit;
+        font-weight: inherit;
+        font-size: inherit;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  .feedback {
+    &__title {
+      font-weight: $Bold;
+      font-size: 21px;
+      line-height: 32px;
+    }
+
+    &__link {
+      font-weight: medium;
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+  }
+
+}
