@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Barrio');
 
 
 @import './scss/global';
@@ -7,6 +8,7 @@
 @import './scss/social';
 @import './scss/fontStyle';
 @import './scss/form';
+@import './scss/menu';
 
 
 .visually-hidden {
@@ -34,24 +36,6 @@
     padding: 5vmin;
     margin: 0;
   }
-}
-
-.menu-order__container {
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-  align-items: center;
-}
-
-.order__link {
-  display: inline-block;
-  padding: 1rem 2rem;
-
-  border-radius: 50px;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 14px;
-  text-align: center;
 }
 
 .about {
@@ -514,10 +498,42 @@
       }
     }
   }
+}
 
+.main-footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 
+  background-image: url("./img/footer-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $colorBlueBlack;
 
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+  }
 
+  .footer-menu {
+    display: flex;
+    padding: 0 4vmin;
+    justify-content: space-between;
+  }
 
+  .nav {
+    min-width: 30%;
+    max-width: 50%;
+    display: flex;
+    &__list {
+      display: flex;
+      min-width: 100%;
+      justify-content: space-between;
+    }
+  }
 
 }

@@ -286,9 +286,34 @@
     }
 
     &__link {
-      font-weight: medium;
+      font-weight: $Medium;
       font-size: 16px;
       line-height: 26px;
+    }
+  }
+}
+
+.main-footer {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 23px;
+
+  &__title {
+    font-family: $BarrioFont;
+    font-size: 120px;
+    font-weight: $Regular;
+  }
+
+  .footer__copyright {
+    font-family: $OpenSansFont;
+  }
+
+  .nav {
+    &__link {
+      color: #ffffff;
+      font-weight: $Bold;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
     }
 
   }
