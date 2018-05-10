@@ -1,10 +1,28 @@
 @mixin colorScheme($color) {
   border: 3vmin solid $color;
 
+  .menu-order__container {
+    &:hover {
+      background-color: $color;
+
+      .order__link {
+        color: #ffffff;
+        border: 2px solid #ffffff;
+        &:hover {
+          background-color: #ffffff;
+          color: $color;
+        }
+      }
+    }
+  }
+
   .home__link {
     font-size: 0;
     svg {
       fill: $color;
+      path {
+        fill: #ffffff;
+      }
     }
   }
 
@@ -36,9 +54,4 @@
       color: $color;
     }
   }
-
-  .contacts {
-
-  }
-
 }

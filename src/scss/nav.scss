@@ -1,0 +1,15 @@
+.nav {
+  min-width: 30%;
+  max-width: 50%;
+  display: flex;
+  &__list {
+    display: flex;
+    min-width: 100%;
+    justify-content: space-between;
+  }
+  &__link {
+    &:hover {
+      color: $colorGreen;
+    }
+  }
+}

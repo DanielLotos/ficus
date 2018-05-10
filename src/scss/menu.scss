@@ -1,8 +1,20 @@
 .menu-order__container {
   display: flex;
+  padding: 3vmin;
   justify-content: space-between;
   align-content: center;
   align-items: center;
+
+  .nav {
+    display: none;
+    min-width: 40%;
+  }
+
+  &:hover {
+    .nav {
+      display: flex;
+    }
+  }
 }
 
 .order__link {

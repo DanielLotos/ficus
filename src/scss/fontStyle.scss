@@ -307,15 +307,13 @@
   .footer__copyright {
     font-family: $OpenSansFont;
   }
+}
 
-  .nav {
-    &__link {
-      color: #ffffff;
-      font-weight: $Bold;
-      letter-spacing: 1.4px;
-      text-transform: uppercase;
-    }
-
+.nav {
+  &__link {
+    color: #ffffff;
+    font-weight: $Bold;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
   }
-
 }

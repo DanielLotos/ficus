@@ -1,11 +1,17 @@
 @mixin socialColor($color) {
   border: {
-    width: 1px;
+    width: 2px;
     style: solid;
     color: $color;
   }
   svg {
     fill: $color;
+  }
+  &:hover {
+    background-color: $color;
+    svg {
+      fill: #ffffff;
+    }
   }
 }
 
@@ -25,7 +31,7 @@
   display: block;
   width: 4vmin;
   height: 4vmin;
-  border: 1px solid #ffffff;
+  border: 2px solid #ffffff;
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position: center center;
@@ -42,6 +48,14 @@
   .social__list {
     bottom: 137px;
     right: 93px;
+    .social__link {
+      &:hover {
+        background-color: #ffffff;
+        svg {
+          fill: $colorBlueBlack;
+        }
+      }
+    }
   }
 }
 
@@ -72,5 +86,11 @@
 .contacts {
   .social__link {
     @include socialColor(#ffffff);
+    &:hover {
+      background-color: #ffffff;
+      svg {
+        fill: $colorOrange;
+      }
+    }
   }
 }

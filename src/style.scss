@@ -9,6 +9,7 @@
 @import './scss/fontStyle';
 @import './scss/form';
 @import './scss/menu';
+@import './scss/nav';
 
 
 .visually-hidden {
@@ -26,7 +27,7 @@
 
 .home {
   display: flex;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   align-items: flex-end;
   background-color: $colorBlueBlack;
@@ -55,7 +56,7 @@
     }
     .steps {
       max-width: 725px;
-      padding: 3vmin 5vmin;
+      padding: 2vmin 5vmin;
       display: flex;
       width: 100%;
       flex: 1;
@@ -218,10 +219,6 @@
 
 .price {
 
-  .menu-order__container {
-    margin-bottom: 5vmin;
-  }
-
   &__container {
     display: flex;
     flex-direction: column;
@@ -300,10 +297,6 @@
 
 .team {
 
-  .menu-order__container {
-    margin-bottom: 5vmin;
-  }
-
   &__container {
     display: flex;
     flex-direction: column;
@@ -344,6 +337,7 @@
       display: flex;
       max-width: 45%;
       flex-direction: column;
+      align-items: center;
       img {
         max-width: 214px;
         height: auto;
@@ -415,7 +409,22 @@
   background-color: $colorOrange;
 
   .menu-order__container {
-    margin-bottom: 5vmin;
+    &:hover {
+      .nav__link {
+        color: $colorOrange;
+        &:hover {
+          color: $colorGreen;
+        }
+      }
+      .order__link {
+        color: $colorOrange;
+        border: 2px solid $colorOrange;
+        &:hover {
+          color: #ffffff;
+          background-color: $colorOrange;
+        }
+      }
+    }
   }
 
   &__container {
@@ -503,6 +512,7 @@
 .main-footer {
   position: relative;
   display: flex;
+  padding: 1vmin;
   flex-direction: column;
   justify-content: flex-end;
 
@@ -524,16 +534,4 @@
     padding: 0 4vmin;
     justify-content: space-between;
   }
-
-  .nav {
-    min-width: 30%;
-    max-width: 50%;
-    display: flex;
-    &__list {
-      display: flex;
-      min-width: 100%;
-      justify-content: space-between;
-    }
-  }
-
 }
