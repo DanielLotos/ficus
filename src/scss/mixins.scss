@@ -43,6 +43,26 @@
     background-color: $color;
   }
 
+  .steps {
+    &__arrow-prev,
+    &__arrow-next {
+      svg {
+        circle {
+          fill: $color;
+          opacity: 0.5;
+        }
+        path {
+          stroke: #ffffff;
+        }
+        &:hover {
+          circle {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
   .price {
     &__item {
       border: 5px solid $color;

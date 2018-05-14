@@ -26,6 +26,7 @@ mixin priceItem(title, priceValue)
     .select__wrapper
       p.price__value= priceValue
       a.price__select(href="#", alt="Выбрать тариф " + title)
+        include arrow.pug
 
 
 mixin person(name, position, about, src, alt)

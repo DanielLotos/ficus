@@ -41,8 +41,10 @@ html(lang="ru")
           | имеем при себе помощников для съёмок, где они просто необходимы.
         .steps__slide-selecter
           button.steps__arrow-prev(type="button")
+            include pug/arrow.pug
           span.steps__num-slide 01
           button.steps__arrow-next(type="button")
+            include pug/arrow.pug
 
     +section(class='portfolio')
       .portfolio__content
@@ -57,7 +59,9 @@ html(lang="ru")
             | искусства "Гараж". Отличный концерт, превосходная атмосфера, Бюджет "Эконом".
           .news__arrow-wrapper
             button.news__arrow-prev(type="button")
+              include pug/arrow.pug
             button.news__arrow-next(type="button")
+              include pug/arrow.pug
 
       .portfolio__carousel
         p.portfolio__link-list
