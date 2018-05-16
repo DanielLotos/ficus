@@ -22,7 +22,7 @@
   &__input {
     background-color: transparent;
     border: none;
-    border-bottom: 3px solid #ffffff;
+    // border-bottom: 3px solid #ffffff;
 
     line-height: 4vmin;
   }
@@ -44,15 +44,21 @@
     padding: 1rem 2rem;
     margin-left: auto;
 
+    color: $colorOrange;
     font-size: 14px;
     font-weight: 700;
     line-height: 14px;
     text-align: center;
     text-transform: uppercase;
+    opacity: 1;
 
     background-color: #ffffff;
     border: none;
     border-radius: 50px;
+
+    &:hover {
+      opacity: 0.6;
+    }
   }
 
 }

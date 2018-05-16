@@ -52,12 +52,16 @@
 }
 
 .about-us__name {
+  max-width: 80%;
   margin-bottom: 3vmin;
   // font-family: inherit;
   font-weight: 900;
   font-size: 56px;
   line-height: 70px;
   text-transform: uppercase;
+  @include screen-style(tablet) {
+    max-width: 100%;
+  };
 }
 
 .about-us__quote {

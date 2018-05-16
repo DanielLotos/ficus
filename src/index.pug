@@ -16,9 +16,7 @@ html(lang="ru")
       .about-us
         +counter('о нас', '01')
         h2.about-us__name
-          | ficus
-          br
-          | production
+          | ficus production
         p.about-us__quote
           | Мы занимаемся созданеим видео любой сложности:
           | от репортажей до рекламных роликов.
@@ -83,6 +81,7 @@ html(lang="ru")
           label.controller__label(for="carousel__slide-3")
           input.controller__radio.visually-hidden(type="radio", name="carousel__slide", id="carousel__slide-4" , value="4")
           label.controller__label(for="carousel__slide-4")
+      include pug/portfolio__carousel--tablet.pug
 
 
     +section(class='price')
