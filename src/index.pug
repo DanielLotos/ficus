@@ -65,6 +65,11 @@ html(lang="ru")
         p.portfolio__link-list
           a.portfolio__link.portfolio__link--active(href="video.html") видео
           a.portfolio__link(href="youtube.com") youtube
+        .portfolio__link-list--tablet
+          +counter('портфолио', '02')
+          p.portfolio__link-list
+            a.portfolio__link.portfolio__link--active(href="video.html") видео
+            a.portfolio__link(href="youtube.com") youtube
         .carousel__gallery
           img.gallery__item(src="./src/img/gall-1.jpg", alt="Котейка на одеяле")
           img.gallery__item(src="./src/img/gall-2.jpg", alt="Грязевая дорога в поле")
@@ -81,7 +86,6 @@ html(lang="ru")
           label.controller__label(for="carousel__slide-3")
           input.controller__radio.visually-hidden(type="radio", name="carousel__slide", id="carousel__slide-4" , value="4")
           label.controller__label(for="carousel__slide-4")
-      include pug/portfolio__carousel--tablet.pug
 
 
     +section(class='price')

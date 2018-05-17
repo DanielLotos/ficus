@@ -51,10 +51,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 calc(100% / 12 + 20px);
+    padding: $paddingContainer;
     @include screen-style(tablet) {
       justify-content: center;
       flex-wrap: wrap;
+      padding: $paddingContainerTablet;
     };
     .about-us {
       display: flex;
@@ -67,13 +68,13 @@
       };
       @include screen-style(tablet) {
         display: block;
-        min-width: 90%;
+        min-width: 100%;
         margin-bottom: 4vmin;
       };
     }
     .steps {
       max-width: 725px;
-      padding: 2vmin 5vmin;
+      padding: 3vmin 3vmin;
       display: flex;
       // width: 100%;
       // flex: 1;
@@ -84,7 +85,7 @@
       };
       @include screen-style(tablet) {
         display: block;
-        width: 90%;
+        width: 100%;
       };
       &__container {
         display: flex;
@@ -146,6 +147,7 @@
     justify-content: space-between;
     padding: $paddingContainer;
     @include screen-style(tablet) {
+      padding: $paddingContainerTablet;
       justify-content: center;
     };
   }
@@ -210,47 +212,40 @@
 
   &__content {
     @include screen-style(tablet) {
+      position: absolute;
+      z-index: 1000;
       display: none;
     };
-
-    &--tablet {
-      display: none;
-    }
   }
 
   &__carousel {
-    max-width: 575px;
+    // max-width: 575px;
     @include screen-style(hd1440) {
       width: 30vmax;
     };
     @include screen-style(tablet) {
-      display: none;
+      position: relative;
+      width: 100%;
     };
 
     .portfolio__link-list {
       margin-bottom: 3vmin;
-      .portfolio__link:first-of-type {
-        margin-right: 2vmin;
-      }
-    }
-
-    &--tablet {
-      display: none;
-      width: 90%;
       @include screen-style(tablet) {
-        display: block;
+        display: none;
       };
-
-      .carousel__header {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 10vmin;
-      }
-      .counter__wrapper {
-        margin-bottom: 0;
-      }
       .portfolio__link:first-of-type {
         margin-right: 2vmin;
+      }
+      &--tablet {
+        display: none;
+        @include screen-style(tablet) {
+          display: flex;
+          justify-content: space-between;
+        };
+        .portfolio__link-list {
+          display: block;
+          margin-bottom: 10vmin;
+        }
       }
     }
   }
@@ -301,11 +296,18 @@
     display: flex;
     flex-direction: column;
     padding: $paddingContainer;
+    @include screen-style(tablet) {
+      padding: $paddingContainerTablet;
+    };
 
   }
   &__wrapper {
     display: flex;
     margin-bottom: 7vmin;
+    @include screen-style(tablet) {
+      justify-content: space-between;
+      margin-bottom: 10vmin;
+    };
   }
 
   .counter__wrapper {
@@ -317,6 +319,9 @@
   &__text {
     display: flex;
     max-width: 75%;
+    @include screen-style(tablet) {
+      max-width: 65%;
+    };
   }
 
   &__item {
@@ -325,15 +330,22 @@
     margin-bottom: 7vmin;
     justify-content: space-between;
     align-items: center;
-
     background-color: #F8F9FB;
+    @include screen-style(tablet) {
+      flex-direction: column;
+    };
 
     .features__list {
       display: flex;
       justify-content: space-between;
+      @include screen-style(tablet) {
+        width: 90%;
+        margin-bottom: 4vmin;
+      };
+
       .features__item {
         &:not(:last-of-type) {
-          margin-right: 5vmin;
+          margin-right: 2vmin;
         }
         .features__capture {
           margin-bottom: 3vmin;
@@ -372,6 +384,11 @@
     display: flex;
     justify-content: space-between;
 
+    .partners__item {
+      &:nth-last-child(-n+2) {
+        display: none;
+      }
+    }
     .partners__link {
       opacity: 0.5;
       &:hover {
@@ -388,11 +405,17 @@
     display: flex;
     flex-direction: column;
     padding: $paddingContainer;
+    @include screen-style(tablet) {
+      padding: $paddingContainerTablet;
+    };
 
   }
   &__wrapper {
     display: flex;
     margin-bottom: 10vmin;
+    @include screen-style(tablet) {
+      justify-content: space-between;
+    };
   }
 
   .counter__wrapper {
@@ -404,6 +427,9 @@
   &__text {
     display: flex;
     max-width: 75%;
+    @include screen-style(tablet) {
+      max-width: 65%;
+    };
   }
 
   .person {
@@ -412,6 +438,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @include screen-style(tablet) {
+        flex-wrap: wrap;
+      };
     }
 
     &__list {
@@ -419,6 +448,11 @@
       max-width: 50%;
       flex-wrap: wrap;
       justify-content: space-between;
+      @include screen-style(tablet) {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 10vmin;
+      };
     }
 
     &__item {
@@ -426,15 +460,24 @@
       max-width: 45%;
       flex-direction: column;
       align-items: center;
+      @include screen-style(tablet) {
+        max-width: 40%;
+      };
       img {
         max-width: 214px;
         height: auto;
         margin-bottom: 4vmin;
+        @include screen-style(tablet) {
+          margin-bottom: 2vmin;
+        };
       }
     }
 
     &__position {
       margin-bottom: 4vmin;
+      @include screen-style(tablet) {
+        margin-bottom: 2vmin;
+      };
     }
   }
 
@@ -442,6 +485,10 @@
     display: flex;
     max-width: 40%;
     flex-direction: column;
+    @include screen-style(tablet) {
+      width: 100%;
+      max-width: 100%;
+    };
 
     &::before {
       content: "";
@@ -449,6 +496,9 @@
       max-width: 64px;
       height: 46px;
       margin-bottom: 5vmin;
+      @include screen-style(tablet) {
+        margin-bottom: 8vmin;
+      };
 
       background-image: url("./img/quote.svg");
       background-repeat: no-repeat;
@@ -467,12 +517,21 @@
         margin-bottom: 5vmin;
       }
 
+      &__wrapper {
+        @include screen-style(tablet) {
+          order: 2;
+        };
+      }
+
       &__controller {
         display: flex;
         min-width: 90px;
         max-width: 90px;
         flex-wrap: wrap;
         justify-content: space-between;
+        @include screen-style(tablet) {
+          order: 1;
+        };
         .controller__radio {
           & + .controller__label {
             display: inline-block;
@@ -519,11 +578,18 @@
     display: flex;
     flex-direction: column;
     padding: $paddingContainer;
+    @include screen-style(tablet) {
+      padding: $paddingContainerTablet;
+    };
 
   }
   &__wrapper {
     display: flex;
     margin-bottom: 8vmax;
+    @include screen-style(tablet) {
+      justify-content: space-between;
+      margin-bottom: 10vmin;
+    };
   }
 
   .counter__wrapper {
@@ -535,6 +601,9 @@
   &__text {
     display: flex;
     max-width: 75%;
+    @include screen-style(tablet) {
+      max-width: 65%;
+    };
   }
 
   &__content {
@@ -547,6 +616,10 @@
       justify-content: space-between;
       color: #ffffff;
       text-align: center;
+      margin-right: 4vmin;
+      @include screen-style(tablet) {
+        margin-right: 0;
+      };
 
       &__wrapper:not(:last-of-type) {
         position: relative;

@@ -35,6 +35,9 @@
 
 .counter__title-slide {
   margin-right: 53px;
+  @include screen-style(tablet) {
+    margin-right: 2vmin;
+  };
 }
 
 .counter__num-viewport {
@@ -89,10 +92,6 @@
   font-weight: $Regular;
   font-size: 18px;
   line-height: 29px;
-}
-
-.steps {
-  // font-family: inherit;
 }
 
 .steps__title {
@@ -159,14 +158,21 @@
   &__text {
     font-family: $OpenSansFont;
     font-weight: $Regular;
-    font-size: 18px;
+    font-size: $fontSizeHD;
     line-height: 29px;
+    @include screen-style(tablet) {
+      font-size: $fontSizeTab;
+    };
   }
 
   &__title {
     font-weight: $ExtraBold;
     font-size: 32px;
     text-transform: uppercase;
+    @include screen-style(tablet) {
+      margin-bottom: 4vmin;
+      color: $colorGreen;
+    };
   }
 
   .features__capture,
@@ -198,8 +204,11 @@
   &__text {
     font-family: $OpenSansFont;
     font-weight: $Regular;
-    font-size: 18px;
+    font-size: $fontSizeHD;
     line-height: 29px;
+    @include screen-style(tablet) {
+      font-size: $fontSizeTab;
+    };
   }
 
   .person {
@@ -256,8 +265,11 @@
     color: #ffffff;
     font-family: $OpenSansFont;
     font-weight: $Regular;
-    font-size: 18px;
+    font-size: $fontSizeHD;
     line-height: 29px;
+    @include screen-style(tablet) {
+      font-size: $fontSizeTab;
+    };
   }
 
   .order {
