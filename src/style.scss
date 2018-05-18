@@ -609,6 +609,9 @@
   &__content {
     display: flex;
     justify-content: space-between;
+    @include screen-style(tablet) {
+      flex-direction: column;
+    };
 
     .feedback {
       display: flex;
@@ -618,7 +621,7 @@
       text-align: center;
       margin-right: 4vmin;
       @include screen-style(tablet) {
-        margin-right: 0;
+        flex-direction: row;
       };
 
       &__wrapper:not(:last-of-type) {
@@ -634,6 +637,9 @@
           height: 2px;
 
           background-color: rgba($color: #ffffff, $alpha: 0.2);
+          @include screen-style(tablet) {
+            display: none;
+          };
         }
       }
 
@@ -692,7 +698,7 @@
 
   .footer-menu {
     display: flex;
-    padding: 0 4vmin;
+    padding: 2vmin 4vmin;
     justify-content: space-between;
   }
 }

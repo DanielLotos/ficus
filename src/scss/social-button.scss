@@ -1,0 +1,96 @@
+@mixin socialColor($color) {
+  border: {
+    width: 2px;
+    style: solid;
+    color: $color;
+  }
+  svg {
+    fill: $color;
+  }
+  &:hover {
+    background-color: $color;
+    svg {
+      fill: #ffffff;
+    }
+  }
+}
+
+.social__list {
+  position: absolute;
+  bottom: 75px;
+  right: 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(4 * 4vmin + 4 * 10px);
+  font-size: 0;
+}
+
+.social__link {
+  position: relative;
+  display: block;
+  width: 4vmin;
+  height: 4vmin;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      fill: #ffffff;
+      transform: translate(-50%, -50%);
+    }
+}
+
+.home {
+  .social__list {
+    bottom: 137px;
+    right: 93px;
+    .social__link {
+      &:hover {
+        background-color: #ffffff;
+        svg {
+          fill: $colorBlueBlack;
+        }
+      }
+    }
+  }
+}
+
+.about {
+  .social__link {
+    @include socialColor($colorBlue);
+  }
+}
+
+.portfolio {
+  .social__link {
+    @include socialColor($colorOrange);
+  }
+}
+
+.price {
+  .social__link {
+    @include socialColor($colorGreen);
+  }
+}
+
+.team {
+  .social__link {
+    @include socialColor($colorBlue);
+  }
+}
+
+.contacts {
+  .social__link {
+    @include socialColor(#ffffff);
+    &:hover {
+      background-color: #ffffff;
+      svg {
+        fill: $colorOrange;
+      }
+    }
+  }
+}
