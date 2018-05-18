@@ -61,31 +61,27 @@ html(lang="ru")
             button.news__arrow-next(type="button")
               include pug/arrow.pug
 
-      .portfolio__carousel
-        p.portfolio__link-list
-          a.portfolio__link.portfolio__link--active(href="video.html") видео
-          a.portfolio__link(href="youtube.com") youtube
-        .portfolio__link-list--tablet
+      .carousel
+        p.carousel__link-list
+          a.carousel__link.carousel__link--active(href="video.html") видео
+          a.carousel__link(href="youtube.com") youtube
+        .carousel__link-list--tablet
           +counter('портфолио', '02')
-          p.portfolio__link-list
-            a.portfolio__link.portfolio__link--active(href="video.html") видео
-            a.portfolio__link(href="youtube.com") youtube
-        .carousel__gallery
+          p.carousel__link-list
+            a.carousel__link.carousel__link--active(href="video.html") видео
+            a.carousel__link(href="youtube.com") youtube
+        .gallery
           img.gallery__item(src="./src/img/gall-1.jpg", alt="Котейка на одеяле")
           img.gallery__item(src="./src/img/gall-2.jpg", alt="Грязевая дорога в поле")
           img.gallery__item(src="./src/img/gall-3.jpg", alt="Музыкальное представление")
           img.gallery__item(src="./src/img/gall-4.jpg", alt="Черно-белый маяк")
           img.gallery__item(src="./src/img/gall-5.jpg", alt="Мопс, завернутый в плед")
           img.gallery__item(src="./src/img/gall-6.jpg", alt="Поток людей")
-        .carousel__controller
-          input.controller__radio.visually-hidden(type="radio", name="carousel__slide", id="carousel__slide-1" , value="1" checked)
-          label.controller__label(for="carousel__slide-1")
-          input.controller__radio.visually-hidden(type="radio", name="carousel__slide", id="carousel__slide-2" , value="2")
-          label.controller__label(for="carousel__slide-2")
-          input.controller__radio.visually-hidden(type="radio", name="carousel__slide", id="carousel__slide-3" , value="3")
-          label.controller__label(for="carousel__slide-3")
-          input.controller__radio.visually-hidden(type="radio", name="carousel__slide", id="carousel__slide-4" , value="4")
-          label.controller__label(for="carousel__slide-4")
+        .controller
+          .controller__item.controller__item--active
+          .controller__item
+          .controller__item
+          .controller__item
 
 
     +section(class='price')
@@ -141,22 +137,18 @@ html(lang="ru")
           'Арт Филипп Валиулин'
           )
 
-        .team__quote
+        .quote
           p.quote__text
             | Lorem ipsum dolor sit amet, consectetur elit, sed do eiumod tempor incididunt ut labore et dolore magna aliqua.
           .quote__footer
             .quote__wrapper
               p.quote__author Arthur Hansen
               p.quote__position CEO / Letters Inc
-            .quote__controller
-              input.controller__radio.visually-hidden(type="radio",name="team-quote", id="quote-1" , value="1" checked)
-              label.controller__label(for="quote-1")
-              input.controller__radio.visually-hidden(type="radio", name="team-quote", id="quote-2" , value="2")
-              label.controller__label(for="quote-2")
-              input.controller__radio.visually-hidden(type="radio", name="team-quote", id="quote-3" , value="3")
-              label.controller__label(for="quote-3")
-              input.controller__radio.visually-hidden(type="radio", name="team-quote", id="quote-4" , value="4")
-              label.controller__label(for="quote-4")
+            .controller
+              .controller__item.controller__item--active
+              .controller__item
+              .controller__item
+              .controller__item
 
     +section(class='contacts')
       .contacts__wrapper
