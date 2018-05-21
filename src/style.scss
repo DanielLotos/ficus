@@ -43,6 +43,13 @@
     padding: 5vmin;
     margin: 0;
   }
+
+  .social__link{
+    color: #ffffff;
+    &:hover {
+      color: $colorBlueBlack;
+    }
+  }
 }
 
 .about {
@@ -177,8 +184,12 @@
     }
     &__btn {
       @include btn-style-FIX(40px, 40px, #ffffff, none, 50%);
+      opacity: 0.5;
       &:first-of-type {
         margin-right: 3vmin;
+      }
+      &:hover {
+        opacity: 1;
       }
     }
   }
@@ -329,7 +340,7 @@
         margin-right: 2vmin;
       }
       .price__select {
-        @include btn-style-FIX(40px, 40px, #ffffff, none, 50%);
+        @include btn-style-FIX(40px, 40px, none, none, 50%);
         position: relative;
         text-align: center;
         &:before {

@@ -16,6 +16,19 @@
     }
   }
 
+  .social__link {
+    border: {
+      width: 2px;
+      style: solid;
+      color: $color;
+    }
+    color: $color;
+    &:hover {
+      color: #ffffff;
+      background-color: $color;
+    }
+  }
+
   .home__link {
     font-size: 0;
     svg {
@@ -75,7 +88,12 @@
       color: $color;
     }
     &__select {
+      color: #ffffff;
       background-color: $color;
+      &:hover {
+        background-color: #ffffff;
+        color: $color;
+      }
     }
   }
 }
