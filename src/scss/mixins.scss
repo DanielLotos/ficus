@@ -26,6 +26,10 @@
     }
   }
 
+  .news__btn {
+    background-color: $color;
+  }
+
   .order__link {
     border: 2px solid $color;
     color: $color;
@@ -39,25 +43,22 @@
   }
 
   .steps__link--active,
-  .portfolio__link--active {
+  .carousel__link--active {
     background-color: $color;
   }
 
   .steps {
-    &__arrow-prev,
-    &__arrow-next {
+    &__btn {
+      background-color: $color;
+      opacity: 0.5;
+
+      &:hover {
+        opacity: 1;
+      }
       svg {
-        circle {
-          fill: $color;
-          opacity: 0.5;
-        }
         path {
           stroke: #ffffff;
-        }
-        &:hover {
-          circle {
-            opacity: 1;
-          }
+          fill: none;
         }
       }
     }
@@ -72,6 +73,9 @@
     }
     &__value {
       color: $color;
+    }
+    &__select {
+      background-color: $color;
     }
   }
 }
@@ -90,4 +94,20 @@
   @else if $media == fullHD {
     @media only screen and (min-width: $FULLHD - 1) { @content; }
   }
+}
+
+//mixin for btn NOT FIX width height
+@mixin btn-style($fill, $border, $radius) {
+  background-color: $fill;
+  border-radius: $radius;
+  border: $border;
+}
+
+//mixin for btn FIX width height
+@mixin btn-style-FIX($width, $height, $color, $border, $radius) {
+  width: $width;
+  height: $height;
+  color: $color;
+  border-radius: $radius;
+  border: $border;
 }

@@ -1,0 +1,23 @@
+.portfolio__carousel--tablet
+  .carousel__header
+    +counter('портфолио', '02')
+    p.portfolio__link-list
+      a.portfolio__link.portfolio__link--active(href="video.html") видео
+      a.portfolio__link(href="youtube.com") youtube
+  .carousel__gallery
+    img.gallery__item(src="./src/img/gall-1.jpg", alt="Котейка на одеяле")
+    img.gallery__item(src="./src/img/gall-2.jpg", alt="Грязевая дорога в поле")
+    img.gallery__item(src="./src/img/gall-3.jpg", alt="Музыкальное представление")
+    img.gallery__item(src="./src/img/gall-4.jpg", alt="Черно-белый маяк")
+    img.gallery__item(src="./src/img/gall-5.jpg", alt="Мопс, завернутый в плед")
+    img.gallery__item(src="./src/img/gall-6.jpg", alt="Поток людей")
+  .carousel__controller
+    input.controller__radio.visually-hidden(type="radio", name="carousel__slide", id="carousel__slide-1" , value="1" checked)
+    label.controller__label(for="carousel__slide-1")
+    input.controller__radio.visually-hidden(type="radio", name="carousel__slide", id="carousel__slide-2" , value="2")
+    label.controller__label(for="carousel__slide-2")
+    input.controller__radio.visually-hidden(type="radio", name="carousel__slide", id="carousel__slide-3" , value="3")
+    label.controller__label(for="carousel__slide-3")
+    input.controller__radio.visually-hidden(type="radio", name="carousel__slide", id="carousel__slide-4" , value="4")
+    label.controller__label(for="carousel__slide-4")
+include modal.pug

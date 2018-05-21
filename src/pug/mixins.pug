@@ -1,3 +1,4 @@
+//mixin for creation section and cantainer inside
 mixin section
   section&attributes(attributes)
     include menu.pug
@@ -5,14 +6,14 @@ mixin section
     div(class!=attributes.class + '__container')
       block
 
-
+//mixin for auto-number slide
 mixin counter(name, number)
     .counter__wrapper(name, number)
       h2.counter__title-slide= name
       span.counter__num-viewport= number
       span.counter__max-num-viewport 05
 
-
+//mixin for select price value item
 mixin priceItem(title, priceValue)
   .price__item
     .price__title= title
@@ -25,13 +26,26 @@ mixin priceItem(title, priceValue)
         p.features__value 10GB of Lorem ipsum
     .select__wrapper
       p.price__value= priceValue
-      a.price__select(href="#", alt="Выбрать тариф " + title)
-        include arrow.pug
+      a.price__select.pxl_icon.pxl_right(href="#", alt="Выбрать тариф " + title)
 
-
+//mixin for person block
 mixin person(name, position, about, src, alt)
   li.person__item
     img.person__art(src=src, alt=alt)
     p.person__name= name
     p.person__position= position
     p.person__about= about
+
+//mixin for gallery item image
+mixin gallery(src, typeFile, ...items)
+  .gallery
+    each item in items
+      img.gallery__item(src= src + item + typeFile)
+
+//mixin for partner items
+mixin partners(src, typeFile, ...items)
+  ul.partners__list
+    each item in items
+      li.partners__item
+        a.partners__link(href="#")
+          img(src= src + item + typeFile)

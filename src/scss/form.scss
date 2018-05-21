@@ -1,8 +1,11 @@
 .order {
     display: flex;
     flex-direction: column;
-    min-width: 60%;
-    max-width: 60%;
+    width: 60%;
+    @include screen-style(tablet) {
+      width: 100%;
+      margin-bottom: 10vmin;
+    };
 
     color: #ffffff;
 
@@ -10,13 +13,19 @@
     display: flex;
     margin-bottom: 4vmin;
     justify-content: space-between;
+    @include screen-style(tablet) {
+      flex-direction: column;
+    };
   }
 
   &__wrapper {
     display: flex;
-    min-width: 45%;
-    max-width: 45%;
+    width: 45%;
     flex-direction: column;
+    @include screen-style(tablet) {
+      width: 100%;
+      margin-bottom: 8vmin;
+    };
   }
 
   &__input {
