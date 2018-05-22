@@ -67,8 +67,6 @@
     };
     .about-us {
       display: flex;
-      // width: 100%;
-      // flex: 1;
       flex-direction: column;
       max-width: 590px;
       @include screen-style(hd1440) {
@@ -84,8 +82,6 @@
       max-width: 725px;
       padding: 3vmin 3vmin;
       display: flex;
-      // width: 100%;
-      // flex: 1;
       flex-direction: column;
       background-color: #F0F3F6;
       @include screen-style(hd1440) {
@@ -104,6 +100,11 @@
       &__title {
         display: inline-block;
         margin-right: auto;
+      }
+      &__link {
+        &--active {
+          @include btn-style(none, none, none);
+        }
       }
       &__link:nth-last-child(2) {
         margin-right: 2vmin;
@@ -130,7 +131,7 @@
         margin: 0 2vmin;
       }
       &__btn {
-        @include btn-style-FIX(40px, 40px, #ffffff, none, 50%);
+        @include btn-style-FIX(40px, 40px, #ffffff, none, none, 50%);
       }
     }
   }
@@ -160,16 +161,17 @@
   .news {
     &__video-wrapper {
       position: relative;
-      svg {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        opacity: 1;
-
-        transform: translate(-50%, -50%);
-        cursor: pointer;
+      .news__btn-play {
+        @include to-center();
+        @include btn-style-FIX(80px, 80px, none, #ffffff, none, 50%);
+        opacity: 0.5;
+        font-size: 2.5rem;
+        &:before {
+          @include to-center();
+          transform: translate(-45%, -50%);
+        }
         &:hover {
-          opacity: 0.8;
+          opacity: 1;
         }
       }
     }
@@ -183,7 +185,7 @@
       text-align: right;
     }
     &__btn {
-      @include btn-style-FIX(40px, 40px, #ffffff, none, 50%);
+      @include btn-style-FIX(40px, 40px, #ffffff, none, none, 50%);
       opacity: 0.5;
       &:first-of-type {
         margin-right: 3vmin;
@@ -340,7 +342,7 @@
         margin-right: 2vmin;
       }
       .price__select {
-        @include btn-style-FIX(40px, 40px, none, none, 50%);
+        @include btn-style-FIX(40px, 40px, none, none, none, 50%);
         position: relative;
         text-align: center;
         &:before {
@@ -542,6 +544,15 @@
         }
       }
     }
+    .order__link--tablet {
+      color: $colorOrange;
+      background-color: #ffffff;
+      border: none;
+      &:hover {
+        color: #ffffff;
+        background-color: $colorOrange;
+      }
+    }
   }
 
   &__container {
@@ -659,10 +670,7 @@
   background-color: $colorBlueBlack;
 
   &__title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include to-center();
     white-space: nowrap;
   }
 

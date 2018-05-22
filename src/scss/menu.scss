@@ -21,9 +21,23 @@
   display: inline-block;
   padding: 1rem 2rem;
 
-  border-radius: 50px;
+  @include btn-style(none, none, 50px);
   font-size: 14px;
   font-weight: 700;
   line-height: 14px;
   text-align: center;
+  @include screen-style(tablet) {
+    display: none;
+  };
+  &--tablet {
+    position: relative;
+    display: none !important;
+    @include btn-style-FIX(50px, 50px, none, none, none, 50%);
+    @include screen-style(tablet) {
+      display: inline-block !important;
+    };
+    &:before {
+      @include to-center();
+    }
+  }
 }

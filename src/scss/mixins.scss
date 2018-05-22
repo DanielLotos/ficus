@@ -4,7 +4,6 @@
   .menu-order__container {
     &:hover {
       background-color: $color;
-
       .order__link {
         color: #ffffff;
         border: 2px solid #ffffff;
@@ -46,6 +45,14 @@
   .order__link {
     border: 2px solid $color;
     color: $color;
+    &--tablet {
+      background-color: $color;
+      color: #ffffff;
+      &:hover {
+        background-color: #ffffff;
+        color: $color;
+      }
+    }
   }
 
   .counter__title-slide,
@@ -117,15 +124,23 @@
 //mixin for btn NOT FIX width height
 @mixin btn-style($fill, $border, $radius) {
   background-color: $fill;
+  border: $border;
+  border-radius: $radius;
+}
+
+//mixin for btn FIX width height
+@mixin btn-style-FIX($width, $height, $color, $fill, $border, $radius) {
+  width: $width;
+  height: $height;
+  color: $color;
+  background-color: $fill;
   border-radius: $radius;
   border: $border;
 }
 
-//mixin for btn FIX width height
-@mixin btn-style-FIX($width, $height, $color, $border, $radius) {
-  width: $width;
-  height: $height;
-  color: $color;
-  border-radius: $radius;
-  border: $border;
+@mixin to-center() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
