@@ -664,10 +664,46 @@
   flex-direction: column;
   justify-content: flex-end;
 
-  background-image: url("./img/footer-bg.png");
-  background-repeat: no-repeat;
-  background-position: center;
+  // background-image: url("./img/footer-bg.png");
+  // background-repeat: no-repeat;
+  // background-position: center;
   background-color: $colorBlueBlack;
+
+  &__photo {
+    &--header,
+    &--body,
+    &--footer {
+      position: absolute;
+      display: block;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--header {
+      top: 0;
+      left: 50%;
+      width: 347px;
+      height: 121px;
+      transform: translateX(-50%);
+      background-image: url("./img/photo-header.png");
+    }
+    &--body {
+      top: 50%;
+      left: 50%;
+      width: 498px;
+      height: 288px;
+      transform: translate(-50%, -50%);
+      background-image: url("./img/photo-body.png");
+    }
+    &--footer {
+      bottom: 0;
+      left: 50%;
+      width: 361px;
+      height: 383px;
+      transform: translateX(-50%);
+      background-image: url("./img/photo-footer.png");
+    }
+  }
 
   &__title {
     @include to-center();
