@@ -49,3 +49,14 @@ mixin partners(src, typeFile, ...items)
       li.partners__item
         a.partners__link(href="#")
           img(src= src + item + typeFile)
+
+mixin input-wrapper(type, class)
+  div&attributes(attributes)
+    block
+    input(type="#{type}" class="#{class}")
+
+
+mixin need-works(name, value, id, label)
+  input(type="checkbox" name="#{name}" value="#{value}" id="#{id}")
+  label(for="#{id}")
+    | #{label}

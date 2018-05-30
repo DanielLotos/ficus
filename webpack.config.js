@@ -59,12 +59,23 @@ module.exports = {
     ]
   },
 
+  // plugins: [
+  //   new HtmlWebpackPlugin({
+  //     template: './src/index.pug'
+  //   }),
+  //   new ExtractTextPlugin('style.css')
+  // ],
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.pug'
     }),
+    new HtmlWebpackPlugin({
+      filename: 'brief.html',
+      template: './src/brief.pug'
+    }),
     new ExtractTextPlugin('style.css')
   ],
+
   devServer: {
     inline: true,
     port: 3000,

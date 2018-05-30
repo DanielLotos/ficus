@@ -4,6 +4,19 @@
   .menu-order__container {
     &:hover {
       background-color: $color;
+      .home__link {
+        svg {
+          path {
+            fill: #ffffff;
+          }
+        }
+        &:hover {
+          background-color: #ffffff;
+          path {
+            fill: $color;
+          }
+        }
+      }
       .order__link {
         color: #ffffff;
         border: 2px solid #ffffff;
@@ -31,9 +44,8 @@
   .home__link {
     font-size: 0;
     svg {
-      fill: $color;
       path {
-        fill: #ffffff;
+        fill: $color;
       }
     }
   }
@@ -89,6 +101,9 @@
       border: 5px solid $color;
       &:hover {
         background-color: $color;
+        .price__select {
+          border: 2px solid #ffffff;
+        }
       }
     }
     &__value {

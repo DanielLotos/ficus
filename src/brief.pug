@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title FICUS
+  body
+    include pug/mixins.pug
+
+    +section(class='brief')
+      h1.brief__title
+        | настройте параметры канала:
+      form.form
+        label(for="typeWork")
+          | Тип услуги*
+        select.form__select(id="typeWork")
+          option.form__option
+            | Канал под ключ
+          option.form__option
+            | Канал под ключ
+          option.form__option
+            | Канал под ключ
+          option.form__option
+            | Канал под ключ
+        input(type="range" value="10" min="0" max="16" step="2" id="rangeMinutes")
+
+        input(type="radio" name="levelProduct" value="easy" id="levelProdEasy")
+        label(for="levelProdEasy")
+          | Простой
+        input(type="radio" name="levelProduct" value="pro" id="levelProdProf")
+        label(for="levelProdProf")
+          | Профессиональный
+
+        label(for="period")
+          | Периодичность выпусков (в месяц)*
+        input(type="range" value="3" min="0" max="5" step="1" id="period")
+
+        +need-works(needWorks, airVideo1, needWorks1, "Аэросъемка с квадрокоптером")
+
+        //- input(type="checkbox" name="needWorks" value="airVideo" id="needWorks1")
+        //- label(for="needWorks1")
+        //-   | Аэросъемка с квадрокоптера
+        //- input(type="checkbox" name="needWorks" value="airVideo2" id="needWorks2")
+        //- label(for="needWorks2")
+        //-   | Аэросъемка с квадрокоптера
+        //- input(type="checkbox" name="needWorks" value="airVideo3" id="needWorks3")
+        //- label(for="needWorks3")
+        //-   | Аэросъемка с квадрокоптера
