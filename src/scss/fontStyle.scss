@@ -20,6 +20,9 @@
 
 .counter__wrapper {
   margin-bottom: 32px;
+  @include screen-style(tablet720) {
+    margin: 0;
+  };
 }
 
 .counter__title-slide,
@@ -31,6 +34,9 @@
   font-size: 20px;
   line-height: 26px;
   text-transform: uppercase;
+  @include screen-style(tablet720) {
+    font-size: 16px;
+  };
 }
 
 .counter__title-slide {
@@ -92,6 +98,10 @@
   font-weight: $Regular;
   font-size: 18px;
   line-height: 29px;
+}
+
+.about-us__open-modal {
+  color: #ffffff;
 }
 
 .steps__title {
@@ -218,6 +228,10 @@
       font-size: 26px;
       line-height: 50px;
       text-align: center;
+      @include screen-style(tablet720) {
+        font-size: 22px;
+        line-height: 40px;
+      };
     }
 
     &__position {
@@ -232,6 +246,9 @@
       font-family: $OpenSansFont;
       font-size: 18px;
       line-height: 29px;
+      @include screen-style(tablet720) {
+        display: none;
+      };
     }
   }
 
@@ -315,7 +332,7 @@
   line-height: 23px;
 
   &__title {
-    font-family: $BarrioFont;
+    // font-family: $BarrioFont;
     font-size: 120px;
     font-weight: $Regular;
   }
@@ -331,5 +348,8 @@
     font-weight: $Bold;
     letter-spacing: 1.4px;
     text-transform: uppercase;
+    @include screen-style(tablet) {
+      font-size: 14px;
+    };
   }
 }

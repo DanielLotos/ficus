@@ -1,9 +1,21 @@
 .menu-order__container {
+  position: relative;
   display: flex;
   padding: 3vmin;
   justify-content: space-between;
   align-content: center;
   align-items: center;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 0;
+    transition: all 0.3s;
+  }
 
   .nav {
     display: none;
@@ -11,6 +23,9 @@
   }
 
   &:hover {
+    &:after {
+      height: 100%;
+    }
     .nav {
       display: flex;
     }

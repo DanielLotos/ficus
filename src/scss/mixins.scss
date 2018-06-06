@@ -3,7 +3,9 @@
 
   .menu-order__container {
     &:hover {
-      background-color: $color;
+      &:after {
+        background-color: $color;
+      }
       .home__link {
         svg {
           path {
@@ -79,6 +81,10 @@
     background-color: $color;
   }
 
+  .about-us__open-modal {
+    background-color: $color;
+  }
+
   .steps {
     &__btn {
       background-color: $color;
@@ -125,8 +131,11 @@
   @if $media == phone {
     @media only screen and (max-width: $phone + 1) { @content; }
   }
+  @else if $media == tablet720 {
+    @media only screen and (min-width: $phone - 1) and (max-width: $tablet - 1) { @content; }
+  }
   @else if $media == tablet {
-    @media only screen and (min-width: $phone - 1) and (max-width: $hd1440 - 1) { @content; }
+    @media only screen and (min-width: $tablet720 - 1) and (max-width: $hd1440 - 1) { @content; }
   }
   @else if $media == hd1440 {
     @media only screen and (min-width: $hd1440 - 1) and (max-width: $fullHD - 1) { @content; }
