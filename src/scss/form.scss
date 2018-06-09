@@ -6,6 +6,9 @@
       width: 100%;
       margin-bottom: 10vmin;
     };
+    @include screen-style(tablet720) {
+      margin-bottom: 7vmin;
+    };
 
     color: #ffffff;
 

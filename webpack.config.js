@@ -14,7 +14,7 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'build.js'
+    filename: './js/build.js'
   },
 
   module: {
@@ -53,7 +53,10 @@ module.exports = {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]?[hash]'
+          // FROM
+          // name: '[name].[ext]?[hash]'
+          // TO
+          name: './img/[name].[ext]?[hash]'
         }
       }
     ]
@@ -73,7 +76,10 @@ module.exports = {
       filename: 'brief.html',
       template: './src/brief.pug'
     }),
+    // FROM
     new ExtractTextPlugin('style.css')
+    // TO
+    // new ExtractTextPlugin('./css/style.css')
   ],
 
   devServer: {

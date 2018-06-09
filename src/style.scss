@@ -96,10 +96,13 @@
       }
       &__open-modal {
         @include btn-style(none, none, 50px);
-        display: block;
+        display: none;
         padding: 2vmin;
         margin: 0 auto;
         text-transform: uppercase;
+        @include screen-style(tablet720) {
+          display: block;
+        };
       }
     }
     .steps {
@@ -722,6 +725,24 @@
       @include screen-style(tablet) {
         flex-direction: row;
       };
+      @include screen-style(tablet720) {
+        margin-right: 0;
+      };
+
+      &__wrapper:not(:first-of-type) {
+        position: relative;
+        &:before {
+          @include screen-style(tablet720) {
+            content: "";
+            position: absolute;
+            top: -25%;
+            left: -10%;
+            width: 2px;
+            height: 150%;
+            background-color: rgba($color: #ffffff, $alpha: 0.2);
+          };
+        }
+      }
 
       &__wrapper:not(:last-of-type) {
         position: relative;

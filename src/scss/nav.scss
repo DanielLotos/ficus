@@ -1,6 +1,9 @@
 .nav {
   display: flex;
   width: 55vmin;
+  @include screen-style(tablet720) {
+    width: 60vmin;
+  };
   &__list {
     display: flex;
     min-width: 100%;
