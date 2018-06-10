@@ -32,6 +32,8 @@ $fontSizeTab: 14px;
 
 $paddingContainer: 0 calc(100% / 12 + 20px);
 $paddingContainerTablet: 0 calc(100% / 8 + 20px);
+// $paddingContainerPhone: 0 calc(100% / 3 + 16px);
+$paddingContainerPhone: 0 5vmin;
 
 $phone: 378px;
 $tablet720: 720px;

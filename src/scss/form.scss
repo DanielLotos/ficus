@@ -9,6 +9,10 @@
     @include screen-style(tablet720) {
       margin-bottom: 7vmin;
     };
+    @include screen-style(phone) {
+      width: 100%;
+      flex-direction: column;
+    };
 
     color: #ffffff;
 
@@ -17,6 +21,9 @@
     margin-bottom: 4vmin;
     justify-content: space-between;
     @include screen-style(tablet) {
+      flex-direction: column;
+    };
+    @include screen-style(phone) {
       flex-direction: column;
     };
   }
@@ -29,14 +36,20 @@
       width: 100%;
       margin-bottom: 8vmin;
     };
+    @include screen-style(phone) {
+      width: 100%;
+      &:first-of-type {
+        margin-bottom: 4vmin;
+      }
+    };
   }
 
   &__input {
     background-color: transparent;
     border: none;
     // border-bottom: 3px solid #ffffff;
-
     line-height: 4vmin;
+    height: 8vmin;
   }
 
   &__message {

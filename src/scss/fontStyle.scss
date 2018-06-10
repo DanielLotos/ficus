@@ -8,6 +8,11 @@
     content: ".";
     color: $colorGreen;
   }
+  @include screen-style(phone) {
+    width: 100%;
+    font-size: 80px;
+    text-align: center;
+  };
 }
 
 .order__link {
@@ -23,6 +28,9 @@
   @include screen-style(tablet720) {
     margin: 0;
   };
+  @include screen-style(phone) {
+    margin-bottom: 10vmin;
+  };
 }
 
 .counter__title-slide,
@@ -37,6 +45,10 @@
   @include screen-style(tablet720) {
     font-size: 16px;
   };
+  @include screen-style(phone) {
+    font-size: 16px;
+    line-height: 20px;
+  };
 }
 
 .counter__title-slide {
@@ -48,6 +60,9 @@
 
 .counter__num-viewport {
   margin-right: 20px;
+  @include screen-style(phone) {
+    display: none;
+  };
 }
 
 .counter__max-num-viewport {
@@ -58,6 +73,9 @@
     position: absolute;
     left: -10px;
   }
+  @include screen-style(phone) {
+    display: none;
+  };
 }
 
 .about-us__name {
@@ -71,17 +89,29 @@
   @include screen-style(tablet) {
     max-width: 100%;
   };
+  @include screen-style(phone) {
+    max-width: 100%;
+    font-size: 30px;
+    line-height: 55px;
+    text-align: center;
+  };
 }
 
 .about-us__quote {
   position: relative;
   padding-left: 65px;
   margin-bottom: 3vmin;
-
-  // font-family: inherit;
   font-weight: $SemiBold;
   font-size: 20px;
   line-height: 29px;
+  @include screen-style(phone) {
+    background-color: #F0F3F6;
+    padding: 4vmin;
+    margin-bottom: 8vmin;
+    font-weight: $Medium;
+    font-size: 14px;
+    line-height: 22px;
+  };
   &::before {
     content: "";
     position: absolute;
@@ -90,6 +120,9 @@
     height: 23px;
     background-image: url("./img/quote.svg");
     background-repeat: no-repeat;
+    @include screen-style(phone) {
+      display: none;
+    };
   }
 }
 
@@ -98,6 +131,10 @@
   font-weight: $Regular;
   font-size: 18px;
   line-height: 29px;
+  @include screen-style(phone) {
+    font-size: 14px;
+    line-height: 25px;
+  };
 }
 
 .about-us__open-modal {
@@ -183,6 +220,10 @@
       margin-bottom: 4vmin;
       color: $colorGreen;
     };
+    @include screen-style(phone) {
+      font-size: 20px;
+      margin-bottom: 5vmin;
+    };
   }
 
   .features__capture,
@@ -191,6 +232,10 @@
     font-weight: $SemiBold;
     font-size: 18px;
     line-height: 24px;
+    @include screen-style(phone) {
+      font-size: 14px;
+      line-height: 18px;
+    };
   }
 
   &__value {
@@ -198,6 +243,10 @@
     font-family: $OpenSansFont;
     font-weight: $SemiBold;
     font-size: 50px;
+    @include screen-style(phone) {
+      font-size: 24px;
+      line-height: 44px;
+    };
   }
   &__item:hover {
     .price__title,
@@ -232,6 +281,10 @@
         font-size: 22px;
         line-height: 40px;
       };
+      @include screen-style(phone) {
+        font-size: 14px;
+        line-height: 36px;
+      };
     }
 
     &__position {
@@ -240,6 +293,10 @@
       font-size: 20px;
       text-transform: uppercase;
       text-align: center;
+      @include screen-style(phone) {
+        font-size: 10px;
+        line-height: 30px;
+      };
     }
 
     &__about {
@@ -247,6 +304,9 @@
       font-size: 18px;
       line-height: 29px;
       @include screen-style(tablet720) {
+        display: none;
+      };
+      @include screen-style(phone) {
         display: none;
       };
     }
@@ -258,6 +318,9 @@
       font-weight: $Regular;
       font-size: 20px;
       line-height: 125%;
+      @include screen-style(phone) {
+        font-size: 12px;
+      };
     }
 
     &__author {
@@ -294,6 +357,9 @@
       font-family: $OpenSansFont;
       font-weight: $Bold;
       font-size: 18px;
+      @include screen-style(phone) {
+        font-size: 12px;
+      };
     }
 
     &__input {
@@ -301,6 +367,9 @@
       font-family: $OpenSansFont;
       font-weight: $Regular;
       font-size: 18px;
+      @include screen-style(phone) {
+        font-size: 12px;
+      };
       &::placeholder {
         color: rgba($color: #F0F3F6, $alpha: 0.6);
         font-family: inherit;

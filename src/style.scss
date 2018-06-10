@@ -38,6 +38,9 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  @include screen-style(phone) {
+    border-width: 16px;
+  };
 
   &__title {
     padding: 5vmin;
@@ -73,6 +76,9 @@
       flex-wrap: wrap;
       padding: $paddingContainerTablet;
     };
+    @include screen-style(phone) {
+      padding: $paddingContainerPhone;
+    };
     // --- FIRST VERSION FOR TABLET720
     @include screen-style(tablet720) {
       position: relative;
@@ -93,14 +99,20 @@
         @include screen-style(tablet720) {
           margin-bottom: 3vmin;
         };
+        @include screen-style(phone) {
+          margin-bottom: 5vmin;
+        };
       }
       &__open-modal {
         @include btn-style(none, none, 50px);
         display: none;
-        padding: 2vmin;
+        padding: 3vmin;
         margin: 0 auto;
         text-transform: uppercase;
         @include screen-style(tablet720) {
+          display: block;
+        };
+        @include screen-style(phone) {
           display: block;
         };
       }
@@ -128,6 +140,15 @@
         width: 94vw;
         height: 96vh;
         padding-top: 5vmin;
+      };
+      @include screen-style(phone) {
+        position: absolute;
+        top: -96px;
+        left: 0;
+        // display: block;
+        display: none;
+        width: 94vw;
+        height: 96vh;
       };
       &__container {
         display: flex;
@@ -198,6 +219,9 @@
       padding: $paddingContainerTablet;
       justify-content: center;
     };
+    @include screen-style(phone) {
+      padding: $paddingContainerPhone;
+    };
   }
   &__news {
     width: 80vmin;
@@ -266,6 +290,16 @@
       .news__text {
         color: #F8F9FB;
       }
+    };
+    @include screen-style(phone) {
+      position: absolute;
+      top: 0;
+      z-index: 1000;
+      display: none;
+      width: 100%;
+      height: 100%;
+      padding-top: 24vmin;
+      background-color: rgba($color: #000000, $alpha: 0.8);
     };
   }
 
@@ -352,7 +386,9 @@
     @include screen-style(tablet) {
       padding: $paddingContainerTablet;
     };
-
+    @include screen-style(phone) {
+      padding: $paddingContainerPhone;
+    };
   }
   &__wrapper {
     display: flex;
@@ -378,6 +414,9 @@
     @include screen-style(tablet) {
       max-width: 65%;
     };
+    @include screen-style(phone) {
+      display: none;
+    };
   }
 
   &__item {
@@ -393,6 +432,9 @@
     @include screen-style(tablet720) {
       margin-bottom: 3vmin;
     };
+    @include screen-style(phone) {
+      flex-direction: column;
+    };
 
     .features__list {
       display: flex;
@@ -401,13 +443,26 @@
         width: 90%;
         margin-bottom: 4vmin;
       };
+      @include screen-style(phone) {
+        margin-bottom: 5vmin;
+      };
 
       .features__item {
         &:not(:last-of-type) {
           margin-right: 2vmin;
         }
+        @include screen-style(phone) {
+          margin: 0;
+          text-align: center;
+          &:last-of-type {
+            display: none;
+          }
+        };
         .features__capture {
           margin-bottom: 3vmin;
+          @include screen-style(phone) {
+            margin-bottom: 4vmin;
+          };
         }
       }
     }
@@ -424,6 +479,9 @@
         &:before {
           @include to-center;
         }
+        @include screen-style(phone) {
+          display: none;
+        };
       }
     }
   }
@@ -431,6 +489,9 @@
   .partners__list {
     display: flex;
     justify-content: space-between;
+    @include screen-style(phone) {
+      display: none;
+    };
 
     .partners__item {
       &:nth-last-child(-n+2) {
@@ -464,7 +525,9 @@
     @include screen-style(tablet) {
       padding: $paddingContainerTablet;
     };
-
+    @include screen-style(phone) {
+      padding: $paddingContainerPhone;
+    };
   }
   &__wrapper {
     display: flex;
@@ -475,12 +538,18 @@
     @include screen-style(tablet720) {
       margin-bottom: 3vmin;
     };
+    @include screen-style(phone) {
+      margin-bottom: 0;
+    };
   }
 
   .counter__wrapper {
     display: flex;
     min-width: 25%;
     max-width: 25%;
+    @include screen-style(phone) {
+      max-width: 100%;
+    };
   }
 
   &__text {
@@ -488,6 +557,9 @@
     max-width: 75%;
     @include screen-style(tablet) {
       max-width: 65%;
+    };
+    @include screen-style(phone) {
+      display: none;
     };
   }
 
@@ -499,6 +571,9 @@
       align-items: center;
       @include screen-style(tablet) {
         flex-wrap: wrap;
+      };
+      @include screen-style(phone) {
+        flex-direction: column;
       };
     }
 
@@ -514,6 +589,11 @@
       };
       @include screen-style(tablet720) {
         margin-bottom: 3vmin;
+      };
+      @include screen-style(phone) {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 10vmin;
       };
     }
 
@@ -535,6 +615,10 @@
         @include screen-style(tablet) {
           margin-bottom: 2vmin;
         };
+        @include screen-style(phone) {
+          width: auto;
+          height: 120px;
+        };
       }
     }
 
@@ -554,6 +638,9 @@
       width: 100%;
       max-width: 100%;
     };
+    @include screen-style(phone) {
+      max-width: 100%;
+    };
 
     &::before {
       content: "";
@@ -566,6 +653,9 @@
       };
       @include screen-style(tablet720) {
         margin-bottom: 4vmin;
+      };
+      @include screen-style(phone) {
+        margin-bottom: 10vmin;
       };
 
       background-image: url("./img/quote.svg");
@@ -683,7 +773,9 @@
     @include screen-style(tablet) {
       padding: $paddingContainerTablet;
     };
-
+    @include screen-style(phone) {
+      padding: $paddingContainerPhone;
+    };
   }
   &__wrapper {
     display: flex;
@@ -706,12 +798,18 @@
     @include screen-style(tablet) {
       max-width: 65%;
     };
+    @include screen-style(phone) {
+      display: none;
+    };
   }
 
   &__content {
     display: flex;
     justify-content: space-between;
     @include screen-style(tablet) {
+      flex-direction: column;
+    };
+    @include screen-style(phone) {
       flex-direction: column;
     };
 
@@ -849,6 +947,9 @@
     white-space: nowrap;
     @include screen-style(tablet720) {
       display: none;
+    };
+    @include screen-style(phone) {
+      white-space: normal;
     };
   }
 

@@ -9,6 +9,9 @@
   @include screen-style(tablet) {
     display: none;
   };
+  @include screen-style(phone) {
+    display: none;
+  };
 }
 
 .social__link {
