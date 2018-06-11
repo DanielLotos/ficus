@@ -385,6 +385,9 @@ button {
     background-color: #019CCB; }
   .about .menu-order__container:hover .home__link svg path {
     fill: #ffffff; }
+    @media only screen and (min-width: 319px) and (max-width: 377px) {
+      .about .menu-order__container:hover .home__link svg path {
+        fill: #019CCB; } }
   .about .menu-order__container:hover .home__link:hover {
     background-color: #ffffff; }
     .about .menu-order__container:hover .home__link:hover path {
@@ -442,6 +445,8 @@ button {
       background-color: #019CCB; }
       .about .price__item:hover .price__select {
         border: 2px solid #ffffff; }
+  .about .price__title {
+    color: #019CCB; }
   .about .price__value {
     color: #019CCB; }
   .about .price__select {
@@ -457,6 +462,9 @@ button {
     background-color: #F4AB4D; }
   .portfolio .menu-order__container:hover .home__link svg path {
     fill: #ffffff; }
+    @media only screen and (min-width: 319px) and (max-width: 377px) {
+      .portfolio .menu-order__container:hover .home__link svg path {
+        fill: #F4AB4D; } }
   .portfolio .menu-order__container:hover .home__link:hover {
     background-color: #ffffff; }
     .portfolio .menu-order__container:hover .home__link:hover path {
@@ -514,6 +522,8 @@ button {
       background-color: #F4AB4D; }
       .portfolio .price__item:hover .price__select {
         border: 2px solid #ffffff; }
+  .portfolio .price__title {
+    color: #F4AB4D; }
   .portfolio .price__value {
     color: #F4AB4D; }
   .portfolio .price__select {
@@ -529,6 +539,9 @@ button {
     background-color: #5CCB98; }
   .price .menu-order__container:hover .home__link svg path {
     fill: #ffffff; }
+    @media only screen and (min-width: 319px) and (max-width: 377px) {
+      .price .menu-order__container:hover .home__link svg path {
+        fill: #5CCB98; } }
   .price .menu-order__container:hover .home__link:hover {
     background-color: #ffffff; }
     .price .menu-order__container:hover .home__link:hover path {
@@ -586,6 +599,8 @@ button {
       background-color: #5CCB98; }
       .price .price__item:hover .price__select {
         border: 2px solid #ffffff; }
+  .price .price__title {
+    color: #5CCB98; }
   .price .price__value {
     color: #5CCB98; }
   .price .price__select {
@@ -601,6 +616,9 @@ button {
     background-color: #019CCB; }
   .team .menu-order__container:hover .home__link svg path {
     fill: #ffffff; }
+    @media only screen and (min-width: 319px) and (max-width: 377px) {
+      .team .menu-order__container:hover .home__link svg path {
+        fill: #019CCB; } }
   .team .menu-order__container:hover .home__link:hover {
     background-color: #ffffff; }
     .team .menu-order__container:hover .home__link:hover path {
@@ -658,6 +676,8 @@ button {
       background-color: #019CCB; }
       .team .price__item:hover .price__select {
         border: 2px solid #ffffff; }
+  .team .price__title {
+    color: #019CCB; }
   .team .price__value {
     color: #019CCB; }
   .team .price__select {
@@ -673,6 +693,9 @@ button {
     background-color: #ffffff; }
   .contacts .menu-order__container:hover .home__link svg path {
     fill: #ffffff; }
+    @media only screen and (min-width: 319px) and (max-width: 377px) {
+      .contacts .menu-order__container:hover .home__link svg path {
+        fill: #ffffff; } }
   .contacts .menu-order__container:hover .home__link:hover {
     background-color: #ffffff; }
     .contacts .menu-order__container:hover .home__link:hover path {
@@ -730,6 +753,8 @@ button {
       background-color: #ffffff; }
       .contacts .price__item:hover .price__select {
         border: 2px solid #ffffff; }
+  .contacts .price__title {
+    color: #ffffff; }
   .contacts .price__value {
     color: #ffffff; }
   .contacts .price__select {
@@ -757,6 +782,9 @@ button {
           justify-content: space-between;
   height: calc(4 * 4vmin + 4 * 10px); }
   @media only screen and (min-width: 719px) and (max-width: 1439px) {
+    .social__list {
+      display: none; } }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
     .social__list {
       display: none; } }
 
@@ -790,6 +818,11 @@ button {
   .home__title::after {
     content: ".";
     color: #5CCB98; }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .home__title {
+      width: 100%;
+      font-size: 80px;
+      text-align: center; } }
 
 .order__link {
   font-weight: 700;
@@ -800,6 +833,12 @@ button {
 .counter__wrapper {
   margin-bottom: 32px; }
   @media only screen and (min-width: 377px) and (max-width: 1023px) {
+    .counter__wrapper {
+      margin: 0; } }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .counter__wrapper {
+      margin-bottom: 10vmin; } }
+  @media only screen and (max-width: 321px) {
     .counter__wrapper {
       margin: 0; } }
 
@@ -816,6 +855,12 @@ button {
     .counter__num-viewport,
     .counter__max-num-viewport {
       font-size: 16px; } }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .counter__title-slide,
+    .counter__num-viewport,
+    .counter__max-num-viewport {
+      font-size: 16px;
+      line-height: 20px; } }
 
 .counter__title-slide {
   margin-right: 53px; }
@@ -825,6 +870,9 @@ button {
 
 .counter__num-viewport {
   margin-right: 20px; }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .counter__num-viewport {
+      display: none; } }
 
 .counter__max-num-viewport {
   position: relative;
@@ -833,6 +881,9 @@ button {
     content: "|";
     position: absolute;
     left: -10px; }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .counter__max-num-viewport {
+      display: none; } }
 
 .about-us__name {
   max-width: 80%;
@@ -844,6 +895,12 @@ button {
   @media only screen and (min-width: 719px) and (max-width: 1439px) {
     .about-us__name {
       max-width: 100%; } }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .about-us__name {
+      max-width: 100%;
+      font-size: 30px;
+      line-height: 55px;
+      text-align: center; } }
 
 .about-us__quote {
   position: relative;
@@ -852,6 +909,17 @@ button {
   font-weight: 600;
   font-size: 20px;
   line-height: 29px; }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .about-us__quote {
+      background-color: #F0F3F6;
+      padding: 4vmin;
+      margin-bottom: 8vmin;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 22px; } }
+  @media only screen and (max-width: 321px) {
+    .about-us__quote {
+      margin-bottom: 4vmin; } }
   .about-us__quote::before {
     content: "";
     position: absolute;
@@ -860,12 +928,19 @@ button {
     height: 23px;
     background-image: url(./img/quote.svg?813ce42d96a6fab3700348e49f6ca893);
     background-repeat: no-repeat; }
+    @media only screen and (min-width: 319px) and (max-width: 377px) {
+      .about-us__quote::before {
+        display: none; } }
 
 .about-us__text {
   font-family: "Open Sans", system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 29px; }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .about-us__text {
+      font-size: 14px;
+      line-height: 25px; } }
 
 .about-us__open-modal {
   color: #ffffff; }
@@ -936,6 +1011,10 @@ button {
     .price__title {
       margin-bottom: 4vmin;
       color: #5CCB98; } }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .price__title {
+      font-size: 20px;
+      margin-bottom: 5vmin; } }
 
 .price .features__capture,
 .price .features__value {
@@ -943,12 +1022,21 @@ button {
   font-weight: 600;
   font-size: 18px;
   line-height: 24px; }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .price .features__capture,
+    .price .features__value {
+      font-size: 14px;
+      line-height: 18px; } }
 
 .price__value {
   color: #5CCB98;
   font-family: "Open Sans", system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   font-weight: 600;
   font-size: 50px; }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .price__value {
+      font-size: 24px;
+      line-height: 44px; } }
 
 .price__item:hover .price__title,
 .price__item:hover .price__value {
@@ -973,6 +1061,10 @@ button {
     .team .person__name {
       font-size: 22px;
       line-height: 40px; } }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .team .person__name {
+      font-size: 14px;
+      line-height: 36px; } }
 
 .team .person__position {
   font-family: "Open Sans", system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
@@ -980,6 +1072,10 @@ button {
   font-size: 20px;
   text-transform: uppercase;
   text-align: center; }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .team .person__position {
+      font-size: 10px;
+      line-height: 30px; } }
 
 .team .person__about {
   font-family: "Open Sans", system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
@@ -988,12 +1084,18 @@ button {
   @media only screen and (min-width: 377px) and (max-width: 1023px) {
     .team .person__about {
       display: none; } }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .team .person__about {
+      display: none; } }
 
 .team .quote__text {
   font-family: "Open Sans", system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 125%; }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .team .quote__text {
+      font-size: 12px; } }
 
 .team .quote__author {
   font-weight: 500;
@@ -1021,12 +1123,18 @@ button {
   font-family: "Open Sans", system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   font-weight: 700;
   font-size: 18px; }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .contacts .order__label {
+      font-size: 12px; } }
 
 .contacts .order__input {
   color: #ffffff;
   font-family: "Open Sans", system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   font-weight: 400;
   font-size: 18px; }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .contacts .order__input {
+      font-size: 12px; } }
   .contacts .order__input::-webkit-input-placeholder {
     color: rgba(240, 243, 246, 0.6);
     font-family: inherit;
@@ -1056,11 +1164,19 @@ button {
   font-weight: 700;
   font-size: 21px;
   line-height: 32px; }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .contacts .feedback__title {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px; } }
 
 .contacts .feedback__link {
   font-weight: 500;
   font-size: 16px;
   line-height: 26px; }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .contacts .feedback__link {
+      font-size: 13px; } }
 
 .main-footer {
   color: #ffffff;
@@ -1069,11 +1185,17 @@ button {
   .main-footer__title {
     font-size: 120px;
     font-weight: 400; }
+    @media only screen and (min-width: 319px) and (max-width: 377px) {
+      .main-footer__title {
+        font-size: 40px; } }
   .main-footer .footer__copyright {
     font-family: "Open Sans", system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif; }
     @media only screen and (min-width: 377px) and (max-width: 1023px) {
       .main-footer .footer__copyright {
         font-size: 13px; } }
+    @media only screen and (min-width: 319px) and (max-width: 377px) {
+      .main-footer .footer__copyright {
+        text-align: center; } }
 
 .nav__link {
   color: #ffffff;
@@ -1104,6 +1226,14 @@ button {
   @media only screen and (min-width: 377px) and (max-width: 1023px) {
     .order {
       margin-bottom: 7vmin; } }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .order {
+      width: 100%;
+      margin-bottom: 5vmin;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
   .order__container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1113,6 +1243,12 @@ button {
         -ms-flex-pack: justify;
             justify-content: space-between; }
     @media only screen and (min-width: 719px) and (max-width: 1439px) {
+      .order__container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
+    @media only screen and (min-width: 319px) and (max-width: 377px) {
       .order__container {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -1131,10 +1267,16 @@ button {
       .order__wrapper {
         width: 100%;
         margin-bottom: 8vmin; } }
+    @media only screen and (min-width: 319px) and (max-width: 377px) {
+      .order__wrapper {
+        width: 100%; }
+        .order__wrapper:first-of-type {
+          margin-bottom: 4vmin; } }
   .order__input {
     background-color: transparent;
     border: none;
-    line-height: 4vmin; }
+    line-height: 4vmin;
+    height: 8vmin; }
   .order__message {
     width: 100%;
     height: 8vmax;
@@ -1156,6 +1298,9 @@ button {
     background-color: #ffffff;
     border: none;
     border-radius: 50px; }
+    @media only screen and (min-width: 319px) and (max-width: 377px) {
+      .order__btn {
+        margin: 0; } }
     .order__btn:hover {
       opacity: 1; }
 
@@ -1183,6 +1328,9 @@ button {
     height: 0;
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
+    @media only screen and (min-width: 319px) and (max-width: 377px) {
+      .menu-order__container:after {
+        display: none; } }
   .menu-order__container .nav {
     display: none;
     width: 70vmin; }
@@ -1192,6 +1340,9 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
+    @media only screen and (min-width: 319px) and (max-width: 377px) {
+      .menu-order__container:hover .nav {
+        display: none; } }
 
 .order__link {
   display: inline-block;
@@ -1206,6 +1357,9 @@ button {
   @media only screen and (min-width: 719px) and (max-width: 1439px) {
     .order__link {
       display: none; } }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .order__link {
+      display: none; } }
   .order__link--tablet {
     position: relative;
     display: none !important;
@@ -1216,6 +1370,9 @@ button {
     border-radius: 50%;
     border: none; }
     @media only screen and (min-width: 719px) and (max-width: 1439px) {
+      .order__link--tablet {
+        display: inline-block !important; } }
+    @media only screen and (min-width: 319px) and (max-width: 377px) {
       .order__link--tablet {
         display: inline-block !important; } }
     .order__link--tablet:before {
@@ -1771,6 +1928,9 @@ _________________________*/
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .home {
+      border-width: 16px; } }
   .home__title {
     padding: 5vmin;
     margin: 0; }
@@ -1821,6 +1981,9 @@ _________________________*/
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
         padding: 0 calc(100% / 8 + 20px); } }
+    @media only screen and (min-width: 319px) and (max-width: 377px) {
+      .about__container {
+        padding: 0 5vmin; } }
     @media only screen and (min-width: 377px) and (max-width: 1023px) {
       .about__container {
         position: relative; } }
@@ -1844,15 +2007,24 @@ _________________________*/
       @media only screen and (min-width: 377px) and (max-width: 1023px) {
         .about__container .about-us__text {
           margin-bottom: 3vmin; } }
+      @media only screen and (min-width: 319px) and (max-width: 377px) {
+        .about__container .about-us__text {
+          margin-bottom: 5vmin; } }
+      @media only screen and (max-width: 321px) {
+        .about__container .about-us__text {
+          margin-bottom: 3vmin; } }
       .about__container .about-us__open-modal {
         background-color: none;
         border: none;
         border-radius: 50px;
         display: none;
-        padding: 2vmin;
+        padding: 3vmin;
         margin: 0 auto;
         text-transform: uppercase; }
         @media only screen and (min-width: 377px) and (max-width: 1023px) {
+          .about__container .about-us__open-modal {
+            display: block; } }
+        @media only screen and (min-width: 319px) and (max-width: 377px) {
           .about__container .about-us__open-modal {
             display: block; } }
     .about__container .steps {
@@ -1882,6 +2054,14 @@ _________________________*/
           width: 94vw;
           height: 96vh;
           padding-top: 5vmin; } }
+      @media only screen and (min-width: 319px) and (max-width: 377px) {
+        .about__container .steps {
+          position: absolute;
+          top: -96px;
+          left: 0;
+          display: none;
+          width: 94vw;
+          height: 96vh; } }
       .about__container .steps__container {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1960,6 +2140,9 @@ _________________________*/
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center; } }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .portfolio__container {
+      padding: 0 5vmin; } }
 
 .portfolio__news {
   width: 80vmin; }
@@ -2035,6 +2218,17 @@ _________________________*/
     .portfolio__content .news__title,
     .portfolio__content .news__text {
       color: #F8F9FB; } }
+
+@media only screen and (min-width: 319px) and (max-width: 377px) {
+  .portfolio__content {
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding-top: 24vmin;
+    background-color: rgba(0, 0, 0, 0.8); } }
 
 @media only screen and (min-width: 1439px) and (max-width: 1919px) {
   .portfolio .carousel {
@@ -2126,6 +2320,9 @@ _________________________*/
   @media only screen and (min-width: 719px) and (max-width: 1439px) {
     .price__container {
       padding: 0 calc(100% / 8 + 20px); } }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .price__container {
+      padding: 0 5vmin; } }
 
 .price__wrapper {
   display: -webkit-box;
@@ -2157,6 +2354,9 @@ _________________________*/
   @media only screen and (min-width: 719px) and (max-width: 1439px) {
     .price__text {
       max-width: 65%; } }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .price__text {
+      display: none; } }
 
 .price__item {
   display: -webkit-box;
@@ -2180,6 +2380,12 @@ _________________________*/
   @media only screen and (min-width: 377px) and (max-width: 1023px) {
     .price__item {
       margin-bottom: 3vmin; } }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .price__item {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
   .price__item .features__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2191,10 +2397,22 @@ _________________________*/
       .price__item .features__list {
         width: 90%;
         margin-bottom: 4vmin; } }
+    @media only screen and (min-width: 319px) and (max-width: 377px) {
+      .price__item .features__list {
+        margin-bottom: 5vmin; } }
     .price__item .features__list .features__item:not(:last-of-type) {
       margin-right: 2vmin; }
+    @media only screen and (min-width: 319px) and (max-width: 377px) {
+      .price__item .features__list .features__item {
+        margin: 0;
+        text-align: center; }
+        .price__item .features__list .features__item:last-of-type {
+          display: none; } }
     .price__item .features__list .features__item .features__capture {
       margin-bottom: 3vmin; }
+      @media only screen and (min-width: 319px) and (max-width: 377px) {
+        .price__item .features__list .features__item .features__capture {
+          margin-bottom: 4vmin; } }
   .price__item .select__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2219,6 +2437,9 @@ _________________________*/
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%); }
+      @media only screen and (min-width: 319px) and (max-width: 377px) {
+        .price__item .select__wrapper .price__select {
+          display: none; } }
 
 .price .partners__list {
   display: -webkit-box;
@@ -2227,6 +2448,9 @@ _________________________*/
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .price .partners__list {
+      display: none; } }
   @media only screen and (min-width: 719px) and (max-width: 1439px) {
     .price .partners__list .partners__item:nth-last-child(-n+2) {
       display: none; } }
@@ -2251,6 +2475,9 @@ _________________________*/
   @media only screen and (min-width: 719px) and (max-width: 1439px) {
     .team__container {
       padding: 0 calc(100% / 8 + 20px); } }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .team__container {
+      padding: 0 5vmin; } }
 
 .team__wrapper {
   display: -webkit-box;
@@ -2265,6 +2492,12 @@ _________________________*/
   @media only screen and (min-width: 377px) and (max-width: 1023px) {
     .team__wrapper {
       margin-bottom: 3vmin; } }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .team__wrapper {
+      margin-bottom: 0; } }
+  @media only screen and (max-width: 321px) {
+    .team__wrapper {
+      margin-bottom: 5vmin; } }
 
 .team .counter__wrapper {
   display: -webkit-box;
@@ -2272,6 +2505,9 @@ _________________________*/
   display: flex;
   min-width: 25%;
   max-width: 25%; }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .team .counter__wrapper {
+      max-width: 100%; } }
 
 .team__text {
   display: -webkit-box;
@@ -2281,6 +2517,9 @@ _________________________*/
   @media only screen and (min-width: 719px) and (max-width: 1439px) {
     .team__text {
       max-width: 65%; } }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .team__text {
+      display: none; } }
 
 .team .person__wrapper {
   display: -webkit-box;
@@ -2296,6 +2535,12 @@ _________________________*/
     .team .person__wrapper {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; } }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .team .person__wrapper {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
 
 .team .person__list {
   display: -webkit-box;
@@ -2315,6 +2560,14 @@ _________________________*/
   @media only screen and (min-width: 377px) and (max-width: 1023px) {
     .team .person__list {
       margin-bottom: 3vmin; } }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .team .person__list {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 10vmin; } }
+  @media only screen and (max-width: 321px) {
+    .team .person__list {
+      margin-bottom: 5vmin; } }
 
 .team .person__item {
   display: -webkit-box;
@@ -2334,6 +2587,9 @@ _________________________*/
   @media only screen and (min-width: 377px) and (max-width: 1023px) {
     .team .person__item {
       max-width: 45%; } }
+  @media only screen and (max-width: 321px) {
+    .team .person__item {
+      max-width: 50%; } }
   .team .person__item img {
     max-width: 214px;
     height: auto;
@@ -2341,12 +2597,19 @@ _________________________*/
     @media only screen and (min-width: 719px) and (max-width: 1439px) {
       .team .person__item img {
         margin-bottom: 2vmin; } }
+    @media only screen and (min-width: 319px) and (max-width: 377px) {
+      .team .person__item img {
+        width: auto;
+        height: 120px; } }
 
 .team .person__position {
   margin-bottom: 4vmin; }
   @media only screen and (min-width: 719px) and (max-width: 1439px) {
     .team .person__position {
       margin-bottom: 2vmin; } }
+  @media only screen and (max-width: 321px) {
+    .team .person__position {
+      margin: 0; } }
 
 .team .quote {
   display: -webkit-box;
@@ -2360,6 +2623,9 @@ _________________________*/
   @media only screen and (min-width: 719px) and (max-width: 1439px) {
     .team .quote {
       width: 100%;
+      max-width: 100%; } }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .team .quote {
       max-width: 100%; } }
   .team .quote::before {
     content: "";
@@ -2377,6 +2643,12 @@ _________________________*/
     @media only screen and (min-width: 377px) and (max-width: 1023px) {
       .team .quote::before {
         margin-bottom: 4vmin; } }
+    @media only screen and (min-width: 319px) and (max-width: 377px) {
+      .team .quote::before {
+        margin-bottom: 10vmin; } }
+    @media only screen and (max-width: 321px) {
+      .team .quote::before {
+        margin-bottom: 5vmin; } }
   .team .quote__footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2442,6 +2714,9 @@ _________________________*/
           color: #5CCB98; }
       .contacts .menu-order__container:hover .home__link svg path {
         fill: #F4AB4D; }
+        @media only screen and (min-width: 319px) and (max-width: 377px) {
+          .contacts .menu-order__container:hover .home__link svg path {
+            fill: #ffffff; } }
       .contacts .menu-order__container:hover .home__link:hover {
         background-color: #F4AB4D; }
         .contacts .menu-order__container:hover .home__link:hover path {
@@ -2471,6 +2746,9 @@ _________________________*/
     @media only screen and (min-width: 719px) and (max-width: 1439px) {
       .contacts__container {
         padding: 0 calc(100% / 8 + 20px); } }
+    @media only screen and (min-width: 319px) and (max-width: 377px) {
+      .contacts__container {
+        padding: 0 5vmin; } }
   .contacts__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2482,6 +2760,9 @@ _________________________*/
             -ms-flex-pack: justify;
                 justify-content: space-between;
         margin-bottom: 10vmin; } }
+    @media only screen and (max-width: 321px) {
+      .contacts__wrapper {
+        margin-bottom: 3vmin; } }
   .contacts .counter__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2496,6 +2777,9 @@ _________________________*/
     @media only screen and (min-width: 719px) and (max-width: 1439px) {
       .contacts__text {
         max-width: 65%; } }
+    @media only screen and (min-width: 319px) and (max-width: 377px) {
+      .contacts__text {
+        display: none; } }
   .contacts__content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2504,6 +2788,12 @@ _________________________*/
         -ms-flex-pack: justify;
             justify-content: space-between; }
     @media only screen and (min-width: 719px) and (max-width: 1439px) {
+      .contacts__content {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
+    @media only screen and (min-width: 319px) and (max-width: 377px) {
       .contacts__content {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -2532,6 +2822,15 @@ _________________________*/
       @media only screen and (min-width: 377px) and (max-width: 1023px) {
         .contacts__content .feedback {
           margin-right: 0; } }
+      @media only screen and (min-width: 319px) and (max-width: 377px) {
+        .contacts__content .feedback {
+          margin: 0;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: row;
+                  flex-direction: row;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap; } }
       .contacts__content .feedback__wrapper:not(:first-of-type) {
         position: relative; }
         @media only screen and (min-width: 377px) and (max-width: 1023px) {
@@ -2545,6 +2844,11 @@ _________________________*/
             background-color: rgba(255, 255, 255, 0.2); } }
       .contacts__content .feedback__wrapper:not(:last-of-type) {
         position: relative; }
+        @media only screen and (min-width: 319px) and (max-width: 377px) {
+          .contacts__content .feedback__wrapper:not(:last-of-type) {
+            -webkit-box-flex: 0.5;
+                -ms-flex-positive: 0.5;
+                    flex-grow: 0.5; } }
         .contacts__content .feedback__wrapper:not(:last-of-type)::after {
           content: "";
           position: absolute;
@@ -2557,6 +2861,15 @@ _________________________*/
           @media only screen and (min-width: 719px) and (max-width: 1439px) {
             .contacts__content .feedback__wrapper:not(:last-of-type)::after {
               display: none; } }
+          @media only screen and (min-width: 319px) and (max-width: 377px) {
+            .contacts__content .feedback__wrapper:not(:last-of-type)::after {
+              display: none; } }
+      @media only screen and (min-width: 319px) and (max-width: 377px) {
+        .contacts__content .feedback__wrapper:last-of-type {
+          margin-top: 4vmin;
+          -webkit-box-flex: 1;
+              -ms-flex-positive: 1;
+                  flex-grow: 1; } }
       .contacts__content .feedback__title {
         margin-bottom: 1vmin; }
       .contacts__content .feedback__link {
@@ -2590,11 +2903,35 @@ _________________________*/
       -ms-flex-pack: end;
           justify-content: flex-end;
   background-color: #003B4D; }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .main-footer .nav {
+      width: 100%;
+      padding-bottom: 5vmin; } }
+  @media only screen and (min-width: 319px) and (max-width: 377px) {
+    .main-footer .nav__list {
+      width: 100%;
+      max-height: 120px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -ms-flex-line-pack: justify;
+          align-content: space-between; } }
+  @media only screen and (max-width: 321px) {
+    .main-footer .nav__list {
+      max-height: 100px; } }
+  .main-footer .nav__item {
+    margin-bottom: 2vmin; }
   .main-footer__photo--header, .main-footer__photo--body, .main-footer__photo--footer {
     position: absolute;
     display: block;
     background-repeat: no-repeat;
     background-position: center; }
+    @media only screen and (min-width: 319px) and (max-width: 377px) {
+      .main-footer__photo--header, .main-footer__photo--body, .main-footer__photo--footer {
+        display: none; } }
   .main-footer__photo--header {
     top: 0;
     left: 50%;
@@ -2629,6 +2966,9 @@ _________________________*/
     @media only screen and (min-width: 377px) and (max-width: 1023px) {
       .main-footer__title {
         display: none; } }
+    @media only screen and (min-width: 319px) and (max-width: 377px) {
+      .main-footer__title {
+        white-space: normal; } }
   .main-footer .footer-menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2637,6 +2977,12 @@ _________________________*/
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
+    @media only screen and (min-width: 319px) and (max-width: 377px) {
+      .main-footer .footer-menu {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse; } }
 
 @supports (display: grid) {
   .portfolio .carousel .gallery {
