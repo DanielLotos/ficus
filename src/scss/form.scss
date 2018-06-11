@@ -11,6 +11,7 @@
     };
     @include screen-style(phone) {
       width: 100%;
+      margin-bottom: 5vmin;
       flex-direction: column;
     };
 
@@ -80,6 +81,9 @@
     background-color: #ffffff;
     border: none;
     border-radius: 50px;
+    @include screen-style(phone) {
+      margin: 0;
+    };
 
     &:hover {
       opacity: 1;

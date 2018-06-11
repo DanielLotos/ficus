@@ -10,6 +10,9 @@
         svg {
           path {
             fill: #ffffff;
+            @include screen-style(phone) {
+              fill: $color;
+            };
           }
         }
         &:hover {
@@ -131,8 +134,11 @@
 
 
 @mixin screen-style($media) {
-  @if $media == phone {
-    @media only screen and (max-width: $phone + 1) { @content; }
+  @if $media == phone5 {
+    @media only screen and (max-width: $phone5 + 1) { @content; }
+  }
+  @else if $media == phone {
+    @media only screen and (min-width: $phone5 - 1) and (max-width: $phone - 1) { @content; }
   }
   @else if $media == tablet720 {
     @media only screen and (min-width: $phone - 1) and (max-width: $tablet - 1) { @content; }

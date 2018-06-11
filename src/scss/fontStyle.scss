@@ -31,6 +31,9 @@
   @include screen-style(phone) {
     margin-bottom: 10vmin;
   };
+  @include screen-style(phone5) {
+    margin: 0;
+  };
 }
 
 .counter__title-slide,
@@ -111,6 +114,9 @@
     font-weight: $Medium;
     font-size: 14px;
     line-height: 22px;
+  };
+  @include screen-style(phone5) {
+    margin-bottom: 4vmin;
   };
   &::before {
     content: "";
@@ -385,12 +391,20 @@
       font-weight: $Bold;
       font-size: 21px;
       line-height: 32px;
+      @include screen-style(phone) {
+        font-weight: $Regular;
+        font-size: 12px;
+        line-height: 14px;
+      };
     }
 
     &__link {
       font-weight: $Medium;
       font-size: 16px;
       line-height: 26px;
+      @include screen-style(phone) {
+        font-size: 13px;
+      };
     }
   }
 }
@@ -404,12 +418,18 @@
     // font-family: $BarrioFont;
     font-size: 120px;
     font-weight: $Regular;
+    @include screen-style(phone) {
+      font-size: 40px;
+    };
   }
 
   .footer__copyright {
     font-family: $OpenSansFont;
     @include screen-style(tablet720) {
       font-size: 13px;
+    };
+    @include screen-style(phone) {
+      text-align: center;
     };
   }
 }
